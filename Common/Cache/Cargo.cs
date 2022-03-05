@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Common.Cache
+{
+    public struct Cargo
+    {
+        public const string Administrador = "Administrador";
+        public const string Recepcionista = "Recepcionista";
+        public const string Administracao = "Administração";
+        public const string Designer = "Designer";
+    }
+}

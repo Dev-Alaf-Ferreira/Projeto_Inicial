@@ -20,7 +20,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from UsuariosAdm where LoginName = @usuario and Senha = @senha";
+                    command.CommandText = "select * from Users where LoginName = @usuario and Senha = @senha";
                     command.Parameters.AddWithValue("@usuario", usuario);
                     command.Parameters.AddWithValue("@senha", senha);
                     command.CommandType = CommandType.Text;
@@ -30,11 +30,11 @@ namespace DataAccess
 
                         while (reader.Read())
                         {
-                            UserLoginCache.Usuario_ID = reader.GetInt32(0);
-                            UserLoginCache.PrimeiroNome = reader.GetString(3);
-                            UserLoginCache.SobreNome = reader.GetString(4);
-                            UserLoginCache.Email = reader.GetString(5);
-                            UserLoginCache.Cargo = reader.GetString(6);
+                            UserCache.UsuarioID = reader.GetInt32(0);
+                            UserCache.PrimeiroNome = reader.GetString(3);
+                            UserCache.SobreNome = reader.GetString(4);
+                            UserCache.Email = reader.GetString(6);
+                            UserCache.Cargo = reader.GetString(5);
                         }
                         return true;
                     }
@@ -42,6 +42,17 @@ namespace DataAccess
                         return false;
 
                 }
+            }
+        }
+        public void AnyMethod()
+        {
+            if (UserCache.Cargo == "Administrador")
+            {
+                //Codes
+            }
+            if(UserCache.Cargo == "Recepcionista" || UserCache.Cargo == "Administração" || UserCache.Cargo == "Designer")
+            {
+                //Codes
             }
         }
     }

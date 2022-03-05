@@ -25,9 +25,9 @@ namespace Apresentacao
         }
         private void LoadUserData()
         {
-            lblNome.Text = UserLoginCache.PrimeiroNome + ", " + UserLoginCache.SobreNome;
-            lblCargo.Text = UserLoginCache.Cargo;
-            lblEmail.Text = UserLoginCache.Email;
+            lblNome.Text = UserCache.PrimeiroNome + " " + UserCache.SobreNome;
+            lblCargo.Text = UserCache.Cargo;
+            lblEmail.Text = UserCache.Email;
         }
         #region Funcionalidades del formulario
         //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION ----------------------------------------------------------

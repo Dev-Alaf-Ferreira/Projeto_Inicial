@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Common.Cache
 {
-    public static class UserLoginCache
+    public static class UserCache
     {
-        public static int Usuario_ID { get; set; }
+        public static int UsuarioID { get; set; }
         public static string PrimeiroNome { get; set; }
         public static string SobreNome { get; set; }
         public static string Email { get; set; }

@@ -42,6 +42,9 @@ namespace Apresentacao
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblMensagemError = new System.Windows.Forms.Label();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
@@ -72,13 +75,13 @@ namespace Apresentacao
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsuario.Location = new System.Drawing.Point(310, 89);
+            this.txtUsuario.Location = new System.Drawing.Point(312, 91);
             this.txtUsuario.MaxLength = 60;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(408, 27);
+            this.txtUsuario.Size = new System.Drawing.Size(408, 20);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "USUARIO";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -150,13 +153,13 @@ namespace Apresentacao
             // txtSenha
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSenha.Location = new System.Drawing.Point(312, 143);
+            this.txtSenha.Location = new System.Drawing.Point(312, 147);
             this.txtSenha.MaxLength = 21;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(408, 27);
+            this.txtSenha.Size = new System.Drawing.Size(408, 20);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Text = "SENHA";
             this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
@@ -168,13 +171,46 @@ namespace Apresentacao
             this.lblMensagemError.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagemError.ForeColor = System.Drawing.Color.DimGray;
             this.lblMensagemError.Image = ((System.Drawing.Image)(resources.GetObject("lblMensagemError.Image")));
-            this.lblMensagemError.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblMensagemError.Location = new System.Drawing.Point(307, 188);
+            this.lblMensagemError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMensagemError.Location = new System.Drawing.Point(307, 193);
             this.lblMensagemError.Name = "lblMensagemError";
             this.lblMensagemError.Size = new System.Drawing.Size(145, 18);
             this.lblMensagemError.TabIndex = 9;
             this.lblMensagemError.Text = "Mensagem de Error";
+            this.lblMensagemError.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblMensagemError.Visible = false;
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape4,
+            this.lineShape3});
+            this.shapeContainer2.Size = new System.Drawing.Size(780, 330);
+            this.shapeContainer2.TabIndex = 10;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape4.Enabled = false;
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 312;
+            this.lineShape4.X2 = 717;
+            this.lineShape4.Y1 = 169;
+            this.lineShape4.Y2 = 169;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape3.Enabled = false;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 312;
+            this.lineShape3.X2 = 717;
+            this.lineShape3.Y1 = 113;
+            this.lineShape3.Y2 = 113;
             // 
             // FormTelaAcessar
             // 
@@ -191,6 +227,7 @@ namespace Apresentacao
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.shapeContainer2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTelaAcessar";
@@ -223,6 +260,9 @@ namespace Apresentacao
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblMensagemError;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
     }
 }
 

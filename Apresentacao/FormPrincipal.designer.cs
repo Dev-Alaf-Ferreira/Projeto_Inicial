@@ -182,9 +182,9 @@
             this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEmail.Location = new System.Drawing.Point(89, 84);
+            this.lblEmail.Location = new System.Drawing.Point(12, 104);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(39, 16);
+            this.lblEmail.Size = new System.Drawing.Size(40, 16);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "E-mail";
             // 
@@ -194,9 +194,9 @@
             this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNome.Location = new System.Drawing.Point(89, 59);
+            this.lblNome.Location = new System.Drawing.Point(99, 43);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(39, 16);
+            this.lblNome.Size = new System.Drawing.Size(40, 16);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
@@ -206,19 +206,19 @@
             this.lblCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCargo.Location = new System.Drawing.Point(89, 31);
+            this.lblCargo.Location = new System.Drawing.Point(99, 73);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(41, 16);
+            this.lblCargo.Size = new System.Drawing.Size(42, 16);
             this.lblCargo.TabIndex = 1;
             this.lblCargo.Text = "Cargo";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 21);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 90);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 

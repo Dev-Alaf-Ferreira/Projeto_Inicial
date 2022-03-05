@@ -93,14 +93,14 @@ namespace Apresentacao
                     if (validarLogin == true)
                     {
                         FormPrincipal mainMenu = new FormPrincipal();
-                        MessageBox.Show("Bem Vindo "+UserLoginCache.PrimeiroNome+" "+UserLoginCache.SobreNome);
+                        MessageBox.Show("Bem Vindo "+UserCache.PrimeiroNome+" "+UserCache.SobreNome);
                         mainMenu.Show();
                         mainMenu.FormClosed += Deslogar;
                         this.Hide();
                     }
                     else
                     {
-                        msgError("Usuário ou Senha incorreto \n Por favor tente novamente.");
+                        msgError("Usuário ou Senha incorreto \n    Por favor tente novamente.");
                         txtSenha.Text ="SENHA";
                         txtSenha.UseSystemPasswordChar = false;
                         txtUsuario.Focus();

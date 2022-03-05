@@ -92,7 +92,7 @@ namespace Apresentacao
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(462, 0);
+            this.label1.Location = new System.Drawing.Point(462, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 33);
             this.label1.TabIndex = 5;
@@ -172,7 +172,7 @@ namespace Apresentacao
             this.lblMensagemError.ForeColor = System.Drawing.Color.DimGray;
             this.lblMensagemError.Image = ((System.Drawing.Image)(resources.GetObject("lblMensagemError.Image")));
             this.lblMensagemError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblMensagemError.Location = new System.Drawing.Point(307, 193);
+            this.lblMensagemError.Location = new System.Drawing.Point(314, 193);
             this.lblMensagemError.Name = "lblMensagemError";
             this.lblMensagemError.Size = new System.Drawing.Size(145, 18);
             this.lblMensagemError.TabIndex = 9;
@@ -248,10 +248,7 @@ namespace Apresentacao
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.TextBox txtUsuario;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel linkSenha;

@@ -151,6 +151,11 @@ namespace Apresentacao
             btnConsultas.BackColor = Color.FromArgb(12, 61, 92);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
         //METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL
         private void AbrirFormulario<MiForm>() where MiForm : Form, new() {
@@ -182,7 +187,7 @@ namespace Apresentacao
             if (Application.OpenForms["Form3"] == null)
                 btnCalendario.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form4"] == null)
-                btnCalendario.BackColor = Color.FromArgb(4, 41, 68);
+                btnConsultas.BackColor = Color.FromArgb(4, 41, 68);
         }
     }
 }

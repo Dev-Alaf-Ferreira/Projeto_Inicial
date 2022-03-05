@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelformularios = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Img_MenuPrincipal = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.btnDeslogar = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.panelContenedor.SuspendLayout();
             this.panelformularios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_MenuPrincipal)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelPerfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,7 +78,7 @@
             // panelformularios
             // 
             this.panelformularios.BackColor = System.Drawing.SystemColors.Control;
-            this.panelformularios.Controls.Add(this.pictureBox1);
+            this.panelformularios.Controls.Add(this.Img_MenuPrincipal);
             this.panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelformularios.Location = new System.Drawing.Point(188, 32);
             this.panelformularios.Margin = new System.Windows.Forms.Padding(2);
@@ -86,16 +86,18 @@
             this.panelformularios.Size = new System.Drawing.Size(834, 505);
             this.panelformularios.TabIndex = 2;
             // 
-            // pictureBox1
+            // Img_MenuPrincipal
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(236, 84);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(393, 268);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.Img_MenuPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Img_MenuPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("Img_MenuPrincipal.Image")));
+            this.Img_MenuPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.Img_MenuPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.Img_MenuPrincipal.Name = "Img_MenuPrincipal";
+            this.Img_MenuPrincipal.Size = new System.Drawing.Size(834, 505);
+            this.Img_MenuPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Img_MenuPrincipal.TabIndex = 0;
+            this.Img_MenuPrincipal.TabStop = false;
+            this.Img_MenuPrincipal.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelMenu
             // 
@@ -182,7 +184,7 @@
             this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEmail.Location = new System.Drawing.Point(12, 104);
+            this.lblEmail.Location = new System.Drawing.Point(4, 104);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(40, 16);
             this.lblEmail.TabIndex = 3;
@@ -194,7 +196,7 @@
             this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNome.Location = new System.Drawing.Point(99, 43);
+            this.lblNome.Location = new System.Drawing.Point(95, 43);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(40, 16);
             this.lblNome.TabIndex = 2;
@@ -206,7 +208,7 @@
             this.lblCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCargo.Location = new System.Drawing.Point(99, 73);
+            this.lblCargo.Location = new System.Drawing.Point(95, 73);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(42, 16);
             this.lblCargo.TabIndex = 1;
@@ -361,6 +363,7 @@
             this.ClientSize = new System.Drawing.Size(1022, 537);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(488, 325);
             this.Name = "FormPrincipal";
@@ -369,7 +372,7 @@
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panelContenedor.ResumeLayout(false);
             this.panelformularios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_MenuPrincipal)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelPerfil.ResumeLayout(false);
             this.panelPerfil.PerformLayout();
@@ -396,7 +399,7 @@
         private System.Windows.Forms.Button btnCalendario;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnContatos;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Img_MenuPrincipal;
         private System.Windows.Forms.Panel panelPerfil;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblNome;

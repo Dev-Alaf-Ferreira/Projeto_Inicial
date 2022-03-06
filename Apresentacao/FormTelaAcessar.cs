@@ -92,11 +92,24 @@ namespace Apresentacao
                     var validarLogin = usuario.LoginUser(txtUsuario.Text, txtSenha.Text);
                     if (validarLogin == true)
                     {
-                        FormPrincipal mainMenu = new FormPrincipal();
-                        MessageBox.Show("Bem Vindo "+UserCache.PrimeiroNome+" "+UserCache.SobreNome);
-                        mainMenu.Show();
-                        mainMenu.FormClosed += Deslogar;
-                        this.Hide();
+                        if (UserCache.Cargo == Cargo.Administrador)
+                        {
+                            FormPrincipal mainMenu = new FormPrincipal();
+                            MessageBox.Show("Bem Vindo " + UserCache.PrimeiroNome + " " + UserCache.SobreNome);
+                            mainMenu.Show();
+                            mainMenu.FormClosed += Deslogar;
+                            
+                            this.Hide();
+                        }
+                        if(UserCache.Cargo == Cargo.Contador)
+                        {
+                            Comercial.MainMenuComerc mainMenu = new Comercial.MainMenuComerc();
+                            MessageBox.Show("Bem Vindo " + UserCache.PrimeiroNome + " " + UserCache.SobreNome);
+                            mainMenu.Show();
+                            mainMenu.FormClosed += Deslogar;
+
+                            this.Hide();
+                        }
                     }
                     else
                     {

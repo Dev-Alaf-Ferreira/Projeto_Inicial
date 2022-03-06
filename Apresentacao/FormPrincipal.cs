@@ -22,12 +22,17 @@ namespace Apresentacao
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             LoadUserData();
+            ManagePermissions();
+            
+        }
+        private void ManagePermissions()
+        {
             //gerenciamento de Permissões
             if (UserCache.Cargo == Cargo.Contador)
             {
                 btnPerfilGeral.Enabled = false;
             }
-            if(UserCache.Cargo == Cargo.Recepcionista)
+            if (UserCache.Cargo == Cargo.Recepcionista)
             {
                 btnConsultas.Enabled = false;
                 btnPerfilGeral.Enabled = false;
@@ -189,13 +194,13 @@ namespace Apresentacao
             }
         }
         private void CloseForms(object sender,FormClosedEventArgs e) {
-             if (Application.OpenForms["Form2"] == null)
+             if (Application.OpenForms["Form2_PerfilGeral"] == null)
                 btnPerfilGeral.BackColor = Color.FromArgb(4, 41, 68);
-            if (Application.OpenForms["Form1"] == null)
+            if (Application.OpenForms["Form1_Contatos"] == null)
                 btnContatos.BackColor = Color.FromArgb(4, 41, 68);
-            if (Application.OpenForms["Form3"] == null)
+            if (Application.OpenForms["Form3_Agendamentos"] == null)
                 btnAgendamentos.BackColor = Color.FromArgb(4, 41, 68);
-            if (Application.OpenForms["Form4"] == null)
+            if (Application.OpenForms["Form4_Consultas"] == null)
                 btnConsultas.BackColor = Color.FromArgb(4, 41, 68);
         }
     }

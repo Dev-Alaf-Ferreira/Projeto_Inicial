@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{26F4F474-514F-4FA0-A97F-C2741F55D272}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Administracao", "Administracao", "{D861C138-B8F8-43E4-B27E-262BC53C0912}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAB70406-B305-4270-A947-5C9A7FCA145E} = {D861C138-B8F8-43E4-B27E-262BC53C0912}
+		{0EC25DB2-3FFB-48BC-95C1-F15B83909CC3} = {D861C138-B8F8-43E4-B27E-262BC53C0912}
+		{B33BFC1C-DEBC-494A-9313-1614124025CC} = {D861C138-B8F8-43E4-B27E-262BC53C0912}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CF96C1A-911E-4EB2-84FD-080AEC71F745}

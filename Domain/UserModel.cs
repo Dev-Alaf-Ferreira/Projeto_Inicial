@@ -15,5 +15,17 @@ namespace Domain
         {
             return userDao.Login(usuario, senha);
         }
+        public void AnyMethod()
+        {
+            //Seguranças e Permissões
+            if (UserCache.Cargo == Cargo.Administrador)
+            {
+                //Codes
+            }
+            if (UserCache.Cargo == Cargo.Recepcionista || UserCache.Cargo == Cargo.Administracao || UserCache.Cargo == Cargo.Designer || UserCache.Cargo == Cargo.Contador)
+            {
+                //Codes
+            }
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace Common.Cache
         public const string Recepcionista = "Recepcionista";
         public const string Administracao = "Administração";
         public const string Designer = "Designer";
+        public const string Contador = "Contador";
     }
 }

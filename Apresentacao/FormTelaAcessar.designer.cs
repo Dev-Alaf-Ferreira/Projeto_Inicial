@@ -169,7 +169,7 @@ namespace Apresentacao
             // 
             this.lblMensagemError.AutoSize = true;
             this.lblMensagemError.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagemError.ForeColor = System.Drawing.Color.DimGray;
+            this.lblMensagemError.ForeColor = System.Drawing.SystemColors.Control;
             this.lblMensagemError.Image = ((System.Drawing.Image)(resources.GetObject("lblMensagemError.Image")));
             this.lblMensagemError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblMensagemError.Location = new System.Drawing.Point(314, 193);

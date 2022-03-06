@@ -41,8 +41,8 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnCalendario = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnAgendamentos = new System.Windows.Forms.Button();
+            this.btnPerfilGeral = new System.Windows.Forms.Button();
             this.btnContatos = new System.Windows.Forms.Button();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
@@ -97,7 +97,6 @@
             this.Img_MenuPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Img_MenuPrincipal.TabIndex = 0;
             this.Img_MenuPrincipal.TabStop = false;
-            this.Img_MenuPrincipal.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelMenu
             // 
@@ -105,8 +104,8 @@
             this.panelMenu.Controls.Add(this.btnConsultas);
             this.panelMenu.Controls.Add(this.btnDeslogar);
             this.panelMenu.Controls.Add(this.panelPerfil);
-            this.panelMenu.Controls.Add(this.btnCalendario);
-            this.panelMenu.Controls.Add(this.btnPerfil);
+            this.panelMenu.Controls.Add(this.btnAgendamentos);
+            this.panelMenu.Controls.Add(this.btnPerfilGeral);
             this.panelMenu.Controls.Add(this.btnContatos);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 32);
@@ -129,7 +128,7 @@
             this.btnConsultas.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultas.Name = "btnConsultas";
             this.btnConsultas.Size = new System.Drawing.Size(188, 40);
-            this.btnConsultas.TabIndex = 3;
+            this.btnConsultas.TabIndex = 4;
             this.btnConsultas.Text = "Consultas";
             this.btnConsultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConsultas.UseVisualStyleBackColor = true;
@@ -146,7 +145,7 @@
             this.btnDeslogar.Location = new System.Drawing.Point(0, 465);
             this.btnDeslogar.Name = "btnDeslogar";
             this.btnDeslogar.Size = new System.Drawing.Size(188, 40);
-            this.btnDeslogar.TabIndex = 1;
+            this.btnDeslogar.TabIndex = 5;
             this.btnDeslogar.Text = "Sair";
             this.btnDeslogar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDeslogar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -199,7 +198,7 @@
             this.lblNome.Location = new System.Drawing.Point(95, 40);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(39, 16);
-            this.lblNome.TabIndex = 2;
+            this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
             // lblCargo
@@ -211,7 +210,7 @@
             this.lblCargo.Location = new System.Drawing.Point(95, 72);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(41, 16);
-            this.lblCargo.TabIndex = 1;
+            this.lblCargo.TabIndex = 0;
             this.lblCargo.Text = "Cargo";
             // 
             // pictureBox2
@@ -224,45 +223,46 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // btnCalendario
+            // btnAgendamentos
             // 
-            this.btnCalendario.FlatAppearance.BorderSize = 0;
-            this.btnCalendario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnCalendario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalendario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalendario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCalendario.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendario.Image")));
-            this.btnCalendario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalendario.Location = new System.Drawing.Point(3, 221);
-            this.btnCalendario.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCalendario.Name = "btnCalendario";
-            this.btnCalendario.Size = new System.Drawing.Size(188, 40);
-            this.btnCalendario.TabIndex = 2;
-            this.btnCalendario.Text = "Calendário";
-            this.btnCalendario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCalendario.UseVisualStyleBackColor = true;
-            this.btnCalendario.Click += new System.EventHandler(this.button3_Click);
+            this.btnAgendamentos.FlatAppearance.BorderSize = 0;
+            this.btnAgendamentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnAgendamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnAgendamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendamentos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgendamentos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAgendamentos.Image = ((System.Drawing.Image)(resources.GetObject("btnAgendamentos.Image")));
+            this.btnAgendamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgendamentos.Location = new System.Drawing.Point(3, 221);
+            this.btnAgendamentos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgendamentos.Name = "btnAgendamentos";
+            this.btnAgendamentos.Size = new System.Drawing.Size(188, 40);
+            this.btnAgendamentos.TabIndex = 3;
+            this.btnAgendamentos.Text = "Agendamento";
+            this.btnAgendamentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgendamentos.UseVisualStyleBackColor = true;
+            this.btnAgendamentos.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnPerfil
+            // btnPerfilGeral
             // 
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(3, 133);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(188, 40);
-            this.btnPerfil.TabIndex = 1;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.button2_Click);
+            this.btnPerfilGeral.FlatAppearance.BorderSize = 0;
+            this.btnPerfilGeral.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnPerfilGeral.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnPerfilGeral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfilGeral.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfilGeral.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPerfilGeral.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfilGeral.Image")));
+            this.btnPerfilGeral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfilGeral.Location = new System.Drawing.Point(3, 133);
+            this.btnPerfilGeral.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPerfilGeral.Name = "btnPerfilGeral";
+            this.btnPerfilGeral.Size = new System.Drawing.Size(188, 40);
+            this.btnPerfilGeral.TabIndex = 1;
+            this.btnPerfilGeral.Text = "Perfil";
+            this.btnPerfilGeral.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerfilGeral.UseVisualStyleBackColor = true;
+            this.btnPerfilGeral.Click += new System.EventHandler(this.button2_Click);
+            this.btnPerfilGeral.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPerfilGeral_MouseClick);
             // 
             // btnContatos
             // 
@@ -278,7 +278,7 @@
             this.btnContatos.Margin = new System.Windows.Forms.Padding(2);
             this.btnContatos.Name = "btnContatos";
             this.btnContatos.Size = new System.Drawing.Size(188, 40);
-            this.btnContatos.TabIndex = 0;
+            this.btnContatos.TabIndex = 2;
             this.btnContatos.Text = "Contatos";
             this.btnContatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnContatos.UseVisualStyleBackColor = true;
@@ -396,8 +396,8 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.PictureBox btnFechar;
-        private System.Windows.Forms.Button btnCalendario;
-        private System.Windows.Forms.Button btnPerfil;
+        private System.Windows.Forms.Button btnAgendamentos;
+        private System.Windows.Forms.Button btnPerfilGeral;
         private System.Windows.Forms.Button btnContatos;
         private System.Windows.Forms.PictureBox Img_MenuPrincipal;
         private System.Windows.Forms.Panel panelPerfil;

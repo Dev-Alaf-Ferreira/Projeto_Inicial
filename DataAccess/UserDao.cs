@@ -46,11 +46,12 @@ namespace DataAccess
         }
         public void AnyMethod()
         {
-            if (UserCache.Cargo == "Administrador")
+            if (UserCache.Cargo == Cargo.Administrador)
             {
                 //Codes
             }
-            if(UserCache.Cargo == "Recepcionista" || UserCache.Cargo == "Administração" || UserCache.Cargo == "Designer")
+            if (UserCache.Cargo == Cargo.Recepcionista || UserCache.Cargo == Cargo.Administracao || UserCache.Cargo == Cargo.Designer
+                ||  UserCache.Cargo == Cargo.Contador)
             {
                 //Codes
             }

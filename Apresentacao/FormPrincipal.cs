@@ -22,6 +22,16 @@ namespace Apresentacao
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             LoadUserData();
+            //gerenciamento de Permissões
+            if (UserCache.Cargo == Cargo.Contador)
+            {
+                btnPerfilGeral.Enabled = false;
+            }
+            if(UserCache.Cargo == Cargo.Recepcionista)
+            {
+                btnConsultas.Enabled = false;
+                btnPerfilGeral.Enabled = false;
+            }
         }
         private void LoadUserData()
         {
@@ -126,13 +136,13 @@ namespace Apresentacao
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Form2>();
-            btnPerfil.BackColor = Color.FromArgb(12, 61, 92);
+            btnPerfilGeral.BackColor = Color.FromArgb(12, 61, 92);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Form3>();
-            btnCalendario.BackColor = Color.FromArgb(12, 61, 92);
+            btnAgendamentos.BackColor = Color.FromArgb(12, 61, 92);
         }
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -151,11 +161,10 @@ namespace Apresentacao
             btnConsultas.BackColor = Color.FromArgb(12, 61, 92);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnPerfilGeral_MouseClick(object sender, MouseEventArgs e)
         {
-
+            
         }
-
         #endregion
         //METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL
         private void AbrirFormulario<MiForm>() where MiForm : Form, new() {
@@ -172,7 +181,7 @@ namespace Apresentacao
                 panelformularios.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
-                formulario.FormClosed += new FormClosedEventHandler(CloseForms );
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
             }
             //si el formulario/instancia existe
             else {
@@ -183,9 +192,9 @@ namespace Apresentacao
             if (Application.OpenForms["Form1"] == null)
                 btnContatos.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form2"] == null)
-                btnPerfil.BackColor = Color.FromArgb(4, 41, 68);
+                btnPerfilGeral.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form3"] == null)
-                btnCalendario.BackColor = Color.FromArgb(4, 41, 68);
+                btnAgendamentos.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form4"] == null)
                 btnConsultas.BackColor = Color.FromArgb(4, 41, 68);
         }

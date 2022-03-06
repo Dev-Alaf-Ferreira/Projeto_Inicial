@@ -20,7 +20,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from Users where LoginName = @usuario and Senha = @senha";
+                    command.CommandText = "select * from UsuariosAdm where LoginName = @usuario and Senha = @senha";
                     command.Parameters.AddWithValue("@usuario", usuario);
                     command.Parameters.AddWithValue("@senha", senha);
                     command.CommandType = CommandType.Text;
@@ -33,8 +33,8 @@ namespace DataAccess
                             UserCache.UsuarioID = reader.GetInt32(0);
                             UserCache.PrimeiroNome = reader.GetString(3);
                             UserCache.SobreNome = reader.GetString(4);
-                            UserCache.Email = reader.GetString(6);
-                            UserCache.Cargo = reader.GetString(5);
+                            UserCache.Email = reader.GetString(5);
+                            UserCache.Cargo = reader.GetString(6);
                         }
                         return true;
                     }

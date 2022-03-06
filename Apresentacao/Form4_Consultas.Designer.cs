@@ -1,6 +1,6 @@
 ﻿namespace Apresentacao
 {
-    partial class Form4
+    partial class Form4_Consultas
     {
         /// <summary>
         /// Required designer variable.

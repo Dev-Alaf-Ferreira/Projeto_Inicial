@@ -1,6 +1,6 @@
 ﻿namespace Apresentacao
 {
-    partial class Form2
+    partial class Form2_PerfilGeral
     {
         /// <summary>
         /// Required designer variable.

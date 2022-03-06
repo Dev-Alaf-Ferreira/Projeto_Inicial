@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 
 namespace Apresentacao
 {
-    public partial class Form2 : Form
+    public partial class Form1_Contatos : Form
     {
-        public Form2()
+        public Form1_Contatos()
         {
             InitializeComponent();
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //Configuração de permissão do Form1
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();

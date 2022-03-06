@@ -129,19 +129,19 @@ namespace Apresentacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form1>();
+            AbrirFormulario<Form1_Contatos>();
             btnContatos.BackColor = Color.FromArgb(12, 61, 92);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form2>();
+            AbrirFormulario<Form2_PerfilGeral>();
             btnPerfilGeral.BackColor = Color.FromArgb(12, 61, 92);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form3>();
+            AbrirFormulario<Form3_Agendamentos>();
             btnAgendamentos.BackColor = Color.FromArgb(12, 61, 92);
         }
 
@@ -157,7 +157,7 @@ namespace Apresentacao
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form4>();
+            AbrirFormulario<Form4_Consultas>();
             btnConsultas.BackColor = Color.FromArgb(12, 61, 92);
         }
 
@@ -189,10 +189,10 @@ namespace Apresentacao
             }
         }
         private void CloseForms(object sender,FormClosedEventArgs e) {
+             if (Application.OpenForms["Form2"] == null)
+                btnPerfilGeral.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form1"] == null)
                 btnContatos.BackColor = Color.FromArgb(4, 41, 68);
-            if (Application.OpenForms["Form2"] == null)
-                btnPerfilGeral.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form3"] == null)
                 btnAgendamentos.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form4"] == null)

@@ -45,7 +45,7 @@ namespace DataAccess
             }
         }
         //
-        public string recuperarSenha(string userRequesting)
+        public string RecuperarSenha(string userRequesting)
         {
             using (var connection = GetConnection())
             {
@@ -53,27 +53,27 @@ namespace DataAccess
                 using(var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from UsuariosAdm where LoginName=@user or Email=@mail";
-                    command.Parameters.AddWithValue("@user", userRequesting);
+                    command.CommandText = "select * from UsuariosAdm where LoginName= @usuario or Email=@mail";
+                    command.Parameters.AddWithValue("@usuario", userRequesting);
                     command.Parameters.AddWithValue("@mail", userRequesting);
                     command.CommandType= CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
 
                     if (reader.Read() == true)
                     {
-                        string userName = reader.GetString(3) + " " + reader.GetString(4);
-                        string userMail = reader.GetString(5);
+                        string usuarioName = reader.GetString(3) + " " + reader.GetString(4);
+                        string usuarioMail = reader.GetString(5);
                         string contaSenha = reader.GetString(2);
 
                         var mailService = new MailServices.SystemSupportMail();
-                        mailService.sendMail(
+                        mailService.SendMail(
                             subject: "SYSTEM: Password recovery request",
-                            body: "Olá, " + userName + "\n você pediu para recuperar sua senha. \n" + "sua senha atual é: " + contaSenha +
+                            body: "Olá, " + usuarioName + "\n você pediu para recuperar sua senha. \n" + "sua senha atual é: " + contaSenha +
                                   "\nNo entanto, pedimos que você altere sua senha imediatamente assim que entrar no sistema",
-                            recipientMail: new List<string> { userMail }
+                            recipientMail: new List<string> { usuarioMail }
                             );
-                        return "Olá, " + userName + "\nVocê pediu para recuperar sua senha. \n"
-                               + "Por favor cheque o seu E-mail: " + userMail +
+                        return "Olá, " + usuarioName + "\nVocê pediu para recuperar sua senha. \n"
+                               + "Por favor cheque o seu E-mail: " + usuarioMail +
                                "\nNo entanto, pedimos que você altere sua senha imediatamente assim que entrar no sistema";
                     }
                     else

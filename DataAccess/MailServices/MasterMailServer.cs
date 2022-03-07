@@ -11,26 +11,30 @@ namespace DataAccess.MailServices
     public abstract class MasterMailServer
     {
         private SmtpClient smtpClient;
-        protected string senderMail { get; set; }
-        protected string Senha { get; set; }
-        protected string host { get; set; }
-        protected int port { get; set; }
-        protected bool ssl { get; set; }
+        protected string SenderMail { get; set; }
+        protected string Password { get; set; }
+        protected string Host { get; set; }
+        protected int Port { get; set; }
+        protected bool Ssl { get; set; }
 
-        protected void initializeSmtpClient()
+        protected void InitializeSmtpClient()
         {
-            smtpClient = new SmtpClient();
-            smtpClient.Credentials = new NetworkCredential(senderMail, Senha);
-            smtpClient.Host = host;
-            smtpClient.Port = port;
-            smtpClient.EnableSsl = ssl;
+            smtpClient = new SmtpClient
+            {
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(SenderMail, Password),
+                Host = Host,
+                Port = Port,
+                EnableSsl = Ssl
+            };
+
         }
-        public void sendMail(string subject, string body, List<string> recipientMail)
+        public void SendMail(string subject, string body, List<string> recipientMail)
         {
             var mailMessage = new MailMessage();
             try
             {
-                mailMessage.From = new MailAddress(senderMail);
+                mailMessage.From = new MailAddress(SenderMail);
                 foreach (string mail in recipientMail)
                 {
                     mailMessage.To.Add(mail);
@@ -40,7 +44,7 @@ namespace DataAccess.MailServices
                 mailMessage.Priority = MailPriority.Normal;
                 smtpClient.Send(mailMessage);
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
             finally
             {
                 mailMessage.Dispose();

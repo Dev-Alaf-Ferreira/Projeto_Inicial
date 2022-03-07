@@ -21,7 +21,7 @@ namespace Apresentacao
         private void btn_EnviarRequest_Click(object sender, EventArgs e)
         {
             var usuario = new UserModel();
-            var result = usuario.recuperarSenha(txtUserRequest.Text);
+            var result = usuario.RecuperarSenha(txtUserRequest.Text);
             lblResult.Text = result;
         }
     }

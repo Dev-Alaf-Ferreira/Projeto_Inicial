@@ -13,7 +13,7 @@ namespace DataAccess.MailServices
             SenderMail = "gustavoFazen@gmail.com";
             Password = "zxmnk9ds#";
             Host = "smtp.gmail.com";
-            Port = 587 ;
+            Port = 465 ;
             Ssl = true ;
    
             InitializeSmtpClient();

@@ -53,27 +53,27 @@ namespace DataAccess
                 using(var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * From UsuariosAdm where LoginName=@usuario or Email=@mail";
-                    command.Parameters.AddWithValue("@usuario", userRequesting);
+                    command.CommandText = "select * from UsuariosAdm where LoginName=@user or Email=@mail";
+                    command.Parameters.AddWithValue("@user", userRequesting);
                     command.Parameters.AddWithValue("@mail", userRequesting);
                     command.CommandType= CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
 
                     if (reader.Read() == true)
                     {
-                        string usuarioName = reader.GetString(3) + " " + reader.GetString(4);
-                        string usuarioMail = reader.GetString(5);
+                        string userName = reader.GetString(3) + " " + reader.GetString(4);
+                        string userMail = reader.GetString(5);
                         string contaSenha = reader.GetString(2);
 
                         var mailService = new MailServices.SystemSupportMail();
                         mailService.sendMail(
                             subject: "SYSTEM: Password recovery request",
-                            body: "Olá, " + usuarioName + "\n você pediu para recuperar sua senha. \n" + "sua senha atual é: " + contaSenha +
+                            body: "Olá, " + userName + "\n você pediu para recuperar sua senha. \n" + "sua senha atual é: " + contaSenha +
                                   "\nNo entanto, pedimos que você altere sua senha imediatamente assim que entrar no sistema",
-                            recipientMail: new List<string> { usuarioMail }
+                            recipientMail: new List<string> { userMail }
                             );
-                        return "Olá, " + usuarioName + "\n você pediu para recuperar sua senha. \n"
-                               + "Por favor cheque o seu E-mail: " + usuarioMail +
+                        return "Olá, " + userName + "\nVocê pediu para recuperar sua senha. \n"
+                               + "Por favor cheque o seu E-mail: " + userMail +
                                "\nNo entanto, pedimos que você altere sua senha imediatamente assim que entrar no sistema";
                     }
                     else
@@ -81,15 +81,6 @@ namespace DataAccess
                 }
             }
         }
-
-
-
-
-
-
-
-
-
         public void AnyMethod()
         {
             if (UserCache.Cargo == Cargo.Administrador)

@@ -111,6 +111,12 @@
     <Compile Include="FormPrincipal.designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRecuperarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRecuperarSenha.Designer.cs">
+      <DependentUpon>FormRecuperarSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTelaAcessar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRecuperarSenha.resx">
+      <DependentUpon>FormRecuperarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTelaAcessar.resx">
       <DependentUpon>FormTelaAcessar.cs</DependentUpon>

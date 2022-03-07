@@ -15,6 +15,10 @@ namespace Domain
         {
             return userDao.Login(usuario, senha);
         }
+        public string recuperarSenha(string userRequesting)
+        {
+            return userDao.recuperarSenha(userRequesting);
+        }
         public void AnyMethod()
         {
             //Seguranças e Permissões

@@ -10,11 +10,11 @@ namespace DataAccess.MailServices
     {
         public SystemSupportMail()
         {
-            senderMail = "SuporteBDFazenTech@gmail.com";
+            senderMail = "suportebdfazentech@gmail.com";
             Senha = "sup0rteF@zenT3c#";
             host = "smtp.gmail.com";
-            port = 587;
-            ssl = true;
+            port = 587 ;
+            ssl = true ;
             initializeSmtpClient();
         }
     }

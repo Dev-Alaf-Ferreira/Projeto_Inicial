@@ -156,5 +156,11 @@ namespace Apresentacao
             lblMensagemError.Visible = false;
             this.Show();
         }
+
+        private void linkSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var recuperarSenha = new FormRecuperarSenha();
+            recuperarSenha.ShowDialog();
+        }
     }
 }

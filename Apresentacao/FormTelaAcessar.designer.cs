@@ -127,6 +127,7 @@ namespace Apresentacao
             this.linkSenha.TabIndex = 8;
             this.linkSenha.TabStop = true;
             this.linkSenha.Text = "Esqueceu a senha?";
+            this.linkSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSenha_LinkClicked);
             // 
             // btnEncerrar
             // 

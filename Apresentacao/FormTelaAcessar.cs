@@ -94,12 +94,14 @@ namespace Apresentacao
                     {
                         if (UserCache.Cargo == Cargo.Administrador)
                         {
+                            this.Hide();
+                            FormBoasVindas boasVindas= new FormBoasVindas ();
+                            boasVindas.ShowDialog();
                             FormPrincipal mainMenu = new FormPrincipal();
-                            MessageBox.Show("Bem Vindo " + UserCache.PrimeiroNome + " " + UserCache.SobreNome);
                             mainMenu.Show();
                             mainMenu.FormClosed += Deslogar;
                             
-                            this.Hide();
+                            
                         }
                         if(UserCache.Cargo == Cargo.Contador)
                         {

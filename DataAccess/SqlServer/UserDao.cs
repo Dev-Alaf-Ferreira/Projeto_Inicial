@@ -11,7 +11,18 @@ using Common.Cache;
 namespace DataAccess
 {
     public class UserDao : ConnectionToSql
-    {
+    {   
+        public void editProfile(int Usuario_ID, string LoginName, string Senha, string PrimeiroNome, string SobreNome, string Email)
+        {
+            using (var connection = GetConnection())
+                connection.Open();
+            using(var command = new SqlCommand())
+            {
+                command.Connection = connection;
+                command.CommandText = "update UsuariosAdm set" +
+                    "LoginName=@username, Senha=@senha, PrimeiroNome=@Pnome, SobreNome=@Sbnome, Email=@mail where Usuario_ID=@id";
+            }
+        }
         public bool Login(string usuario, string senha)
         {
             using (var connection = GetConnection())

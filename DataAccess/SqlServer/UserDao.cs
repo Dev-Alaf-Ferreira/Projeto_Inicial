@@ -12,7 +12,7 @@ namespace DataAccess
 {
     public class UserDao : ConnectionToSql
     {   
-        /*public void editProfile(int Usuario_ID, string LoginName, string Senha, string PrimeiroNome, string SobreNome, string Email)
+        public void editProfile(int Usuario_ID, string LoginName, string Senha, string PrimeiroNome, string SobreNome, string Email)
         {
             using (var connection = GetConnection())
                 connection.Open();
@@ -31,7 +31,7 @@ namespace DataAccess
                 command.ExecuteNonQuery();
 
             }
-        }*/
+        }
         public bool Login(string usuario, string senha)
         {
             using (var connection = GetConnection())

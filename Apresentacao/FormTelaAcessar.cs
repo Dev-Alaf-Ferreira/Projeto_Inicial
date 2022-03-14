@@ -105,12 +105,13 @@ namespace Apresentacao
                         }
                         if(UserCache.Cargo == Cargo.Contador)
                         {
+                            this.Hide();
+                            FormBoasVindas boasVindas = new FormBoasVindas ();
+                            boasVindas.ShowDialog ();
                             Comercial.MainMenuComerc mainMenu = new Comercial.MainMenuComerc();
-                            MessageBox.Show("Bem Vindo " + UserCache.PrimeiroNome + " " + UserCache.SobreNome);
                             mainMenu.Show();
                             mainMenu.FormClosed += Deslogar;
 
-                            this.Hide();
                         }
                     }
                     else

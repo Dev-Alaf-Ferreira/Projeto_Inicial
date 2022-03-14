@@ -1,6 +1,6 @@
 ﻿namespace Apresentacao
 {
-    partial class FormUserProfile
+    partial class v
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUserProfile));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -50,16 +50,21 @@
             this.lblUserNameProfile = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblSobreNome = new System.Windows.Forms.Label();
-            this.lblNome = new System.Windows.Forms.Label();
+            this.lblSobreNomeProfile = new System.Windows.Forms.Label();
+            this.lblNomeProfilePerfil = new System.Windows.Forms.Label();
             this.lblUsuário = new System.Windows.Forms.Label();
             this.lblCargoProfile = new System.Windows.Forms.Label();
             this.linklblEditarProfile = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnEncerrarProfile = new System.Windows.Forms.PictureBox();
+            this.lblUserId = new System.Windows.Forms.Label();
+            this.lblPNome = new System.Windows.Forms.Label();
+            this.lblSbNome = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEncerrarProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -286,41 +291,41 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEmail.Location = new System.Drawing.Point(226, 218);
+            this.lblEmail.ForeColor = System.Drawing.Color.Black;
+            this.lblEmail.Location = new System.Drawing.Point(226, 195);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(51, 17);
             this.lblEmail.TabIndex = 7;
             this.lblEmail.Text = "E-mail:";
             // 
-            // lblSobreNome
+            // lblSobreNomeProfile
             // 
-            this.lblSobreNome.AutoSize = true;
-            this.lblSobreNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSobreNome.ForeColor = System.Drawing.Color.DimGray;
-            this.lblSobreNome.Location = new System.Drawing.Point(226, 172);
-            this.lblSobreNome.Name = "lblSobreNome";
-            this.lblSobreNome.Size = new System.Drawing.Size(86, 17);
-            this.lblSobreNome.TabIndex = 6;
-            this.lblSobreNome.Text = "Sobrenome:";
+            this.lblSobreNomeProfile.AutoSize = true;
+            this.lblSobreNomeProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobreNomeProfile.ForeColor = System.Drawing.Color.Black;
+            this.lblSobreNomeProfile.Location = new System.Drawing.Point(228, 152);
+            this.lblSobreNomeProfile.Name = "lblSobreNomeProfile";
+            this.lblSobreNomeProfile.Size = new System.Drawing.Size(86, 17);
+            this.lblSobreNomeProfile.TabIndex = 6;
+            this.lblSobreNomeProfile.Text = "Sobrenome:";
             // 
-            // lblNome
+            // lblNomeProfilePerfil
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNome.Location = new System.Drawing.Point(228, 129);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(52, 17);
-            this.lblNome.TabIndex = 5;
-            this.lblNome.Text = "Nome:";
+            this.lblNomeProfilePerfil.AutoSize = true;
+            this.lblNomeProfilePerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeProfilePerfil.ForeColor = System.Drawing.Color.Black;
+            this.lblNomeProfilePerfil.Location = new System.Drawing.Point(230, 114);
+            this.lblNomeProfilePerfil.Name = "lblNomeProfilePerfil";
+            this.lblNomeProfilePerfil.Size = new System.Drawing.Size(52, 17);
+            this.lblNomeProfilePerfil.TabIndex = 5;
+            this.lblNomeProfilePerfil.Text = "Nome:";
             // 
             // lblUsuário
             // 
             this.lblUsuário.AutoSize = true;
             this.lblUsuário.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuário.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUsuário.Location = new System.Drawing.Point(226, 89);
+            this.lblUsuário.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuário.Location = new System.Drawing.Point(228, 75);
             this.lblUsuário.Name = "lblUsuário";
             this.lblUsuário.Size = new System.Drawing.Size(58, 17);
             this.lblUsuário.TabIndex = 4;
@@ -331,8 +336,8 @@
             // 
             this.lblCargoProfile.AutoSize = true;
             this.lblCargoProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargoProfile.ForeColor = System.Drawing.Color.DimGray;
-            this.lblCargoProfile.Location = new System.Drawing.Point(226, 258);
+            this.lblCargoProfile.ForeColor = System.Drawing.Color.Black;
+            this.lblCargoProfile.Location = new System.Drawing.Point(226, 236);
             this.lblCargoProfile.Name = "lblCargoProfile";
             this.lblCargoProfile.Size = new System.Drawing.Size(54, 17);
             this.lblCargoProfile.TabIndex = 8;
@@ -361,39 +366,94 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Meu Perfil";
             // 
-            // pictureBox2
+            // btnEncerrarProfile
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 17);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            this.btnEncerrarProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnEncerrarProfile.Image")));
+            this.btnEncerrarProfile.Location = new System.Drawing.Point(12, 12);
+            this.btnEncerrarProfile.Name = "btnEncerrarProfile";
+            this.btnEncerrarProfile.Size = new System.Drawing.Size(17, 17);
+            this.btnEncerrarProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEncerrarProfile.TabIndex = 19;
+            this.btnEncerrarProfile.TabStop = false;
             // 
-            // FormUserProfile
+            // lblUserId
+            // 
+            this.lblUserId.AutoSize = true;
+            this.lblUserId.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserId.Location = new System.Drawing.Point(231, 97);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(62, 16);
+            this.lblUserId.TabIndex = 20;
+            this.lblUserId.Text = "usuario_ID";
+            // 
+            // lblPNome
+            // 
+            this.lblPNome.AutoSize = true;
+            this.lblPNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPNome.Location = new System.Drawing.Point(231, 135);
+            this.lblPNome.Name = "lblPNome";
+            this.lblPNome.Size = new System.Drawing.Size(81, 16);
+            this.lblPNome.TabIndex = 21;
+            this.lblPNome.Text = "primeiroNome";
+            // 
+            // lblSbNome
+            // 
+            this.lblSbNome.AutoSize = true;
+            this.lblSbNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSbNome.Location = new System.Drawing.Point(231, 173);
+            this.lblSbNome.Name = "lblSbNome";
+            this.lblSbNome.Size = new System.Drawing.Size(68, 16);
+            this.lblSbNome.TabIndex = 22;
+            this.lblSbNome.Text = "sobreNome";
+            // 
+            // lblMail
+            // 
+            this.lblMail.AutoSize = true;
+            this.lblMail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMail.Location = new System.Drawing.Point(231, 216);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(36, 16);
+            this.lblMail.TabIndex = 23;
+            this.lblMail.Text = "email";
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Location = new System.Drawing.Point(231, 259);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(39, 16);
+            this.lblCargo.TabIndex = 24;
+            this.lblCargo.Text = "cargo";
+            // 
+            // v
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lblCargo);
+            this.Controls.Add(this.lblMail);
+            this.Controls.Add(this.lblSbNome);
+            this.Controls.Add(this.lblPNome);
+            this.Controls.Add(this.lblUserId);
+            this.Controls.Add(this.btnEncerrarProfile);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linklblEditarProfile);
             this.Controls.Add(this.lblCargoProfile);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblSobreNome);
-            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.lblSobreNomeProfile);
+            this.Controls.Add(this.lblNomeProfilePerfil);
             this.Controls.Add(this.lblUsuário);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.DimGray;
-            this.Name = "FormUserProfile";
+            this.Name = "v";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUserProfile";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEncerrarProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,12 +482,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblSobreNome;
-        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblSobreNomeProfile;
+        private System.Windows.Forms.Label lblNomeProfilePerfil;
         private System.Windows.Forms.Label lblUsuário;
         private System.Windows.Forms.Label lblCargoProfile;
         private System.Windows.Forms.LinkLabel linklblEditarProfile;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnEncerrarProfile;
+        private System.Windows.Forms.Label lblUserId;
+        private System.Windows.Forms.Label lblPNome;
+        private System.Windows.Forms.Label lblSbNome;
+        private System.Windows.Forms.Label lblMail;
+        private System.Windows.Forms.Label lblCargo;
     }
 }

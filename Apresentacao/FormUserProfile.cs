@@ -84,5 +84,29 @@ namespace Apresentacao
             loadUserData();
             initializePassEditControls();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (linklblEditarProfile.Text == "Editar")
+            {
+                .Text = "Cancel";
+                txtNvSenha.Enabled = true;
+                txtNvSenha.Text = "";
+                txtCfSenha.Enabled = true;
+                txtCfSenha.Text = "";
+            }
+            else if (LinkEditPass.Text == "Cancel")
+            {
+                initializePassEditControls();
+                txtPassword.Text = UserCache.Password;
+                txtConfirmPass.Text = UserCache.Password;
+            }
+        }
+
+        private void linklblEditarProfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panel1.Visible = true;
+            loadUserData();
+        }
     }
 }

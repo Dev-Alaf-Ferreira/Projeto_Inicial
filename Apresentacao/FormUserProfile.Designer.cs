@@ -116,6 +116,7 @@
             this.linkLabel1.TabIndex = 16;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Editar";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btnSalvar
             // 
@@ -355,6 +356,7 @@
             this.linklblEditarProfile.TabIndex = 17;
             this.linklblEditarProfile.TabStop = true;
             this.linklblEditarProfile.Text = "Editar Perfil";
+            this.linklblEditarProfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblEditarProfile_LinkClicked);
             // 
             // label2
             // 

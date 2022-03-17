@@ -19,7 +19,7 @@ namespace DataAccess
             using(var command = new SqlCommand())
             {
                 command.Connection = connection;
-                command.CommandText = "update UsuariosAdm set" +
+                command.CommandText = "update Users set" +
                     "LoginName=@username, Senha=@senha, PrimeiroNome=@Pnome, SobreNome=@Sbnome, Email=@mail where Usuario_ID=@id";
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@senha", senha);
@@ -40,7 +40,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from UsuariosAdm where LoginName = @usuario and Senha = @senha";
+                    command.CommandText = "select * from Users where LoginName = @usuario and Senha = @senha";
                     command.Parameters.AddWithValue("@usuario", usuario);
                     command.Parameters.AddWithValue("@senha", senha);
                     command.CommandType = CommandType.Text;
@@ -73,7 +73,7 @@ namespace DataAccess
                 using(var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from UsuariosAdm where LoginName= @usuario or Email=@mail";
+                    command.CommandText = "select * from Users where LoginName= @usuario or Email=@mail";
                     command.Parameters.AddWithValue("@usuario", userRequesting);
                     command.Parameters.AddWithValue("@mail", userRequesting);
                     command.CommandType= CommandType.Text;

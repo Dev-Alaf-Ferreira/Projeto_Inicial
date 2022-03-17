@@ -89,17 +89,18 @@ namespace Apresentacao
         {
             if (linklblEditarProfile.Text == "Editar")
             {
+
                 .Text = "Cancel";
                 txtNvSenha.Enabled = true;
                 txtNvSenha.Text = "";
                 txtCfSenha.Enabled = true;
                 txtCfSenha.Text = "";
             }
-            else if (LinkEditPass.Text == "Cancel")
+            else if (linklblEditarProfile.Text == "Cancel")
             {
                 initializePassEditControls();
-                txtPassword.Text = UserCache.Password;
-                txtConfirmPass.Text = UserCache.Password;
+                txtNvSenha.Text = UserCache.Senha;
+                txtCfSenha.Text = UserCache.Senha;
             }
         }
 

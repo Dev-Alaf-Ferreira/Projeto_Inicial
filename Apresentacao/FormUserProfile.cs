@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain;
+using Common.Cache;
 
 namespace Apresentacao
 {
-    public partial class v : Form
+    public partial class FormUserProfile : Form
     {
-        public v()
+        public FormUserProfile()
         {
             InitializeComponent();
         }
@@ -45,6 +47,42 @@ namespace Apresentacao
         private void lblUsuário_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormUserProfile_Load(object sender, EventArgs e)
+        {
+            loadUserData();
+            initializePassEditControls();
+        }
+        private void loadUserData()
+        {
+            //View
+            lblUser.Text = UserCache.LoginName;
+            lblPNome.Text = UserCache.PrimeiroNome;
+            lblSbNome.Text = UserCache.SobreNome;
+            lblMail.Text = UserCache.Email;
+            lblCargo.Text = UserCache.Cargo;
+            //Edit Panel
+            txtUserName.Text = UserCache.LoginName;
+            txtPNome.Text = UserCache.PrimeiroNome;
+            txtSbNome.Text = UserCache.SobreNome;
+            txtEmail.Text = UserCache.Email;
+            txtNvSenha.Text = UserCache.Senha;
+            txtCfSenha.Text = UserCache.Senha;
+            txtAtualSenha.Text = "";
+        }
+        private void initializePassEditControls()
+        {
+            linklblEditarProfile.Text = "Edit";
+            txtNvSenha.UseSystemPasswordChar = true;
+            txtNvSenha.Enabled = false;
+            txtCfSenha.UseSystemPasswordChar = true;
+            txtCfSenha.Enabled = false;
+        }
+        private void reset()
+        {
+            loadUserData();
+            initializePassEditControls();
         }
     }
 }

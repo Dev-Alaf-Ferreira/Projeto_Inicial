@@ -1,6 +1,6 @@
 ﻿namespace Apresentacao
 {
-    partial class v
+    partial class FormUserProfile
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUserProfile));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAtualSenha = new System.Windows.Forms.TextBox();
+            this.txtCfSenha = new System.Windows.Forms.TextBox();
+            this.txtNvSenha = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSbNome = new System.Windows.Forms.TextBox();
+            this.txtPNome = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblCfrmSenha = new System.Windows.Forms.Label();
             this.lblSenhatualProfile = new System.Windows.Forms.Label();
             this.lblNvSenhaProfile = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.linklblEditarProfile = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEncerrarProfile = new System.Windows.Forms.PictureBox();
-            this.lblUserId = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.lblPNome = new System.Windows.Forms.Label();
             this.lblSbNome = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
@@ -74,13 +74,13 @@
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtAtualSenha);
+            this.panel1.Controls.Add(this.txtCfSenha);
+            this.panel1.Controls.Add(this.txtNvSenha);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtSbNome);
+            this.panel1.Controls.Add(this.txtPNome);
+            this.panel1.Controls.Add(this.txtUserName);
             this.panel1.Controls.Add(this.lblCfrmSenha);
             this.panel1.Controls.Add(this.lblSenhatualProfile);
             this.panel1.Controls.Add(this.lblNvSenhaProfile);
@@ -93,6 +93,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(383, 461);
             this.panel1.TabIndex = 0;
+            this.panel1.Visible = false;
             // 
             // label1
             // 
@@ -141,61 +142,61 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox7
+            // txtAtualSenha
             // 
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(31, 344);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(309, 23);
-            this.textBox7.TabIndex = 13;
+            this.txtAtualSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAtualSenha.Location = new System.Drawing.Point(31, 344);
+            this.txtAtualSenha.Name = "txtAtualSenha";
+            this.txtAtualSenha.Size = new System.Drawing.Size(309, 23);
+            this.txtAtualSenha.TabIndex = 13;
             // 
-            // textBox6
+            // txtCfSenha
             // 
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(31, 301);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(309, 23);
-            this.textBox6.TabIndex = 12;
+            this.txtCfSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCfSenha.Location = new System.Drawing.Point(31, 301);
+            this.txtCfSenha.Name = "txtCfSenha";
+            this.txtCfSenha.Size = new System.Drawing.Size(309, 23);
+            this.txtCfSenha.TabIndex = 12;
             // 
-            // textBox5
+            // txtNvSenha
             // 
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(31, 258);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(309, 23);
-            this.textBox5.TabIndex = 11;
+            this.txtNvSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNvSenha.Location = new System.Drawing.Point(31, 258);
+            this.txtNvSenha.Name = "txtNvSenha";
+            this.txtNvSenha.Size = new System.Drawing.Size(309, 23);
+            this.txtNvSenha.TabIndex = 11;
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(31, 215);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(309, 23);
-            this.textBox4.TabIndex = 10;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(31, 215);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(309, 23);
+            this.txtEmail.TabIndex = 10;
             // 
-            // textBox3
+            // txtSbNome
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(31, 172);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(309, 23);
-            this.textBox3.TabIndex = 9;
+            this.txtSbNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSbNome.Location = new System.Drawing.Point(31, 172);
+            this.txtSbNome.Name = "txtSbNome";
+            this.txtSbNome.Size = new System.Drawing.Size(309, 23);
+            this.txtSbNome.TabIndex = 9;
             // 
-            // textBox2
+            // txtPNome
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(31, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(309, 23);
-            this.textBox2.TabIndex = 8;
+            this.txtPNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPNome.Location = new System.Drawing.Point(31, 129);
+            this.txtPNome.Name = "txtPNome";
+            this.txtPNome.Size = new System.Drawing.Size(309, 23);
+            this.txtPNome.TabIndex = 8;
             // 
-            // textBox1
+            // txtUserName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(31, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 23);
-            this.textBox1.TabIndex = 7;
+            this.txtUserName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(31, 86);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(309, 23);
+            this.txtUserName.TabIndex = 7;
             // 
             // lblCfrmSenha
             // 
@@ -376,15 +377,15 @@
             this.btnEncerrarProfile.TabIndex = 19;
             this.btnEncerrarProfile.TabStop = false;
             // 
-            // lblUserId
+            // lblUser
             // 
-            this.lblUserId.AutoSize = true;
-            this.lblUserId.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserId.Location = new System.Drawing.Point(231, 97);
-            this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(62, 16);
-            this.lblUserId.TabIndex = 20;
-            this.lblUserId.Text = "usuario_ID";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(231, 97);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(62, 16);
+            this.lblUser.TabIndex = 20;
+            this.lblUser.Text = "usuario_ID";
             // 
             // lblPNome
             // 
@@ -426,7 +427,7 @@
             this.lblCargo.TabIndex = 24;
             this.lblCargo.Text = "cargo";
             // 
-            // v
+            // FormUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -435,7 +436,7 @@
             this.Controls.Add(this.lblMail);
             this.Controls.Add(this.lblSbNome);
             this.Controls.Add(this.lblPNome);
-            this.Controls.Add(this.lblUserId);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnEncerrarProfile);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linklblEditarProfile);
@@ -447,9 +448,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.DimGray;
-            this.Name = "v";
+            this.Name = "FormUserProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUserProfile";
+            this.Load += new System.EventHandler(this.FormUserProfile_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -469,13 +471,13 @@
         private System.Windows.Forms.Label lblCfrmSenha;
         private System.Windows.Forms.Label lblSenhatualProfile;
         private System.Windows.Forms.Label lblNvSenhaProfile;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAtualSenha;
+        private System.Windows.Forms.TextBox txtCfSenha;
+        private System.Windows.Forms.TextBox txtNvSenha;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSbNome;
+        private System.Windows.Forms.TextBox txtPNome;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -489,7 +491,7 @@
         private System.Windows.Forms.LinkLabel linklblEditarProfile;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnEncerrarProfile;
-        private System.Windows.Forms.Label lblUserId;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPNome;
         private System.Windows.Forms.Label lblSbNome;
         private System.Windows.Forms.Label lblMail;

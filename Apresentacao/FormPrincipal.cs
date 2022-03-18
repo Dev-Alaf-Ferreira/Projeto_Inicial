@@ -140,7 +140,7 @@ namespace Apresentacao
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form2_PerfilGeral>();
+            AbrirFormulario<FormUserProfile>();
             btnPerfilGeral.BackColor = Color.FromArgb(12, 61, 92);
         }
 

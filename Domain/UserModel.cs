@@ -22,13 +22,17 @@ namespace Domain
 
         public UserModel(int usuario_ID, string loginName, string senha, string primeiroNome, string sobreNome, string cargo, string email)
         {
-            Usuario_ID = usuario_ID;
-            LoginName = loginName;
-            Senha = senha;
-            PrimeiroNome = primeiroNome;
-            SobreNome = sobreNome;
-            Cargo = cargo;
-            Email = email;
+            this.Usuario_ID = usuario_ID;
+            this.LoginName = loginName;
+            this.Senha = senha;
+            this.PrimeiroNome = primeiroNome;
+            this.SobreNome = sobreNome;
+            this.Cargo = cargo;
+            this.Email = email;
+        }
+        public UserModel()
+        {
+
         }
         
         public string editUserProfile()
@@ -53,7 +57,7 @@ namespace Domain
         {
             return userDao.RecuperarSenha(userRequesting);
         }
-        public void AnyMethod()
+        /*public void AnyMethod()
         {
             //Seguranças e Permissões
             if (UserCache.Cargo == Cargo.Administrador)
@@ -64,6 +68,6 @@ namespace Domain
             {
                 //Codes
             }
-        }
+        }*/
     }
 }

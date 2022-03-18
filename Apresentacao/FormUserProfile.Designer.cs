@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUserProfile));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnklblEdite = new System.Windows.Forms.LinkLabel();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtAtualSenha = new System.Windows.Forms.TextBox();
@@ -48,30 +48,32 @@
             this.lblSbNomeProfile = new System.Windows.Forms.Label();
             this.lblNomeProfile = new System.Windows.Forms.Label();
             this.lblUserNameProfile = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbx_FotoPerfil = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSobreNomeProfile = new System.Windows.Forms.Label();
             this.lblNomeProfilePerfil = new System.Windows.Forms.Label();
             this.lblUsuário = new System.Windows.Forms.Label();
             this.lblCargoProfile = new System.Windows.Forms.Label();
             this.linklblEditarProfile = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnEncerrarProfile = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPNome = new System.Windows.Forms.Label();
             this.lblSbNome = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
+            this.pbx_ImgFundo = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_FotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrarProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ImgFundo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.lnklblEdite);
             this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.txtAtualSenha);
@@ -89,7 +91,7 @@
             this.panel1.Controls.Add(this.lblNomeProfile);
             this.panel1.Controls.Add(this.lblUserNameProfile);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(401, 0);
+            this.panel1.Location = new System.Drawing.Point(451, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(383, 461);
             this.panel1.TabIndex = 0;
@@ -105,18 +107,17 @@
             this.label1.Size = new System.Drawing.Size(207, 30);
             this.label1.TabIndex = 17;
             this.label1.Text = "Editar meu perfil";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // linkLabel1
+            // lnklblEdite
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(123, 240);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(34, 13);
-            this.linkLabel1.TabIndex = 16;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Editar";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnklblEdite.AutoSize = true;
+            this.lnklblEdite.Location = new System.Drawing.Point(123, 240);
+            this.lnklblEdite.Name = "lnklblEdite";
+            this.lnklblEdite.Size = new System.Drawing.Size(34, 13);
+            this.lnklblEdite.TabIndex = 16;
+            this.lnklblEdite.TabStop = true;
+            this.lnklblEdite.Text = "Editar";
+            this.lnklblEdite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblEdite_LinkClicked_1);
             // 
             // btnSalvar
             // 
@@ -129,6 +130,7 @@
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -141,7 +143,7 @@
             this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtAtualSenha
             // 
@@ -209,7 +211,6 @@
             this.lblCfrmSenha.Size = new System.Drawing.Size(120, 17);
             this.lblCfrmSenha.TabIndex = 6;
             this.lblCfrmSenha.Text = "Confirmar Senha:";
-            this.lblCfrmSenha.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblSenhatualProfile
             // 
@@ -276,22 +277,24 @@
             this.lblUserNameProfile.Size = new System.Drawing.Size(58, 17);
             this.lblUserNameProfile.TabIndex = 0;
             this.lblUserNameProfile.Text = "Usuário:";
-            this.lblUserNameProfile.Click += new System.EventHandler(this.lblLoginProfile_Click);
             // 
-            // pictureBox1
+            // pbx_FotoPerfil
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 75);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(212, 206);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbx_FotoPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.pbx_FotoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbx_FotoPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pbx_FotoPerfil.Image")));
+            this.pbx_FotoPerfil.Location = new System.Drawing.Point(13, 75);
+            this.pbx_FotoPerfil.Name = "pbx_FotoPerfil";
+            this.pbx_FotoPerfil.Size = new System.Drawing.Size(212, 206);
+            this.pbx_FotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbx_FotoPerfil.TabIndex = 1;
+            this.pbx_FotoPerfil.TabStop = false;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(226, 195);
@@ -303,6 +306,8 @@
             // lblSobreNomeProfile
             // 
             this.lblSobreNomeProfile.AutoSize = true;
+            this.lblSobreNomeProfile.BackColor = System.Drawing.Color.Transparent;
+            this.lblSobreNomeProfile.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblSobreNomeProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobreNomeProfile.ForeColor = System.Drawing.Color.Black;
             this.lblSobreNomeProfile.Location = new System.Drawing.Point(228, 152);
@@ -314,6 +319,8 @@
             // lblNomeProfilePerfil
             // 
             this.lblNomeProfilePerfil.AutoSize = true;
+            this.lblNomeProfilePerfil.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeProfilePerfil.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblNomeProfilePerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeProfilePerfil.ForeColor = System.Drawing.Color.Black;
             this.lblNomeProfilePerfil.Location = new System.Drawing.Point(230, 114);
@@ -325,6 +332,8 @@
             // lblUsuário
             // 
             this.lblUsuário.AutoSize = true;
+            this.lblUsuário.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuário.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblUsuário.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuário.ForeColor = System.Drawing.Color.Black;
             this.lblUsuário.Location = new System.Drawing.Point(228, 75);
@@ -332,11 +341,12 @@
             this.lblUsuário.Size = new System.Drawing.Size(58, 17);
             this.lblUsuário.TabIndex = 4;
             this.lblUsuário.Text = "Usuário:";
-            this.lblUsuário.Click += new System.EventHandler(this.lblUsuário_Click);
             // 
             // lblCargoProfile
             // 
             this.lblCargoProfile.AutoSize = true;
+            this.lblCargoProfile.BackColor = System.Drawing.Color.Transparent;
+            this.lblCargoProfile.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblCargoProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargoProfile.ForeColor = System.Drawing.Color.Black;
             this.lblCargoProfile.Location = new System.Drawing.Point(226, 236);
@@ -358,31 +368,24 @@
             this.linklblEditarProfile.Text = "Editar Perfil";
             this.linklblEditarProfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblEditarProfile_LinkClicked);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(61, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 30);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Meu Perfil";
-            // 
             // btnEncerrarProfile
             // 
             this.btnEncerrarProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnEncerrarProfile.Image")));
-            this.btnEncerrarProfile.Location = new System.Drawing.Point(12, 12);
+            this.btnEncerrarProfile.Location = new System.Drawing.Point(378, 12);
             this.btnEncerrarProfile.Name = "btnEncerrarProfile";
             this.btnEncerrarProfile.Size = new System.Drawing.Size(17, 17);
             this.btnEncerrarProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEncerrarProfile.TabIndex = 19;
             this.btnEncerrarProfile.TabStop = false;
+            this.btnEncerrarProfile.Click += new System.EventHandler(this.btnEncerrarProfile_Click);
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.Transparent;
+            this.lblUser.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Black;
             this.lblUser.Location = new System.Drawing.Point(231, 97);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(62, 16);
@@ -392,7 +395,10 @@
             // lblPNome
             // 
             this.lblPNome.AutoSize = true;
+            this.lblPNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblPNome.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblPNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPNome.ForeColor = System.Drawing.Color.Black;
             this.lblPNome.Location = new System.Drawing.Point(231, 135);
             this.lblPNome.Name = "lblPNome";
             this.lblPNome.Size = new System.Drawing.Size(81, 16);
@@ -402,7 +408,10 @@
             // lblSbNome
             // 
             this.lblSbNome.AutoSize = true;
+            this.lblSbNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblSbNome.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblSbNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSbNome.ForeColor = System.Drawing.Color.Black;
             this.lblSbNome.Location = new System.Drawing.Point(231, 173);
             this.lblSbNome.Name = "lblSbNome";
             this.lblSbNome.Size = new System.Drawing.Size(68, 16);
@@ -412,7 +421,10 @@
             // lblMail
             // 
             this.lblMail.AutoSize = true;
+            this.lblMail.BackColor = System.Drawing.Color.Transparent;
+            this.lblMail.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblMail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMail.ForeColor = System.Drawing.Color.Black;
             this.lblMail.Location = new System.Drawing.Point(231, 216);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(36, 16);
@@ -422,18 +434,49 @@
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
+            this.lblCargo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCargo.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.Black;
             this.lblCargo.Location = new System.Drawing.Point(231, 259);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(39, 16);
             this.lblCargo.TabIndex = 24;
             this.lblCargo.Text = "cargo";
             // 
+            // pbx_ImgFundo
+            // 
+            this.pbx_ImgFundo.BackColor = System.Drawing.Color.Transparent;
+            this.pbx_ImgFundo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pbx_ImgFundo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbx_ImgFundo.Image = ((System.Drawing.Image)(resources.GetObject("pbx_ImgFundo.Image")));
+            this.pbx_ImgFundo.Location = new System.Drawing.Point(0, 0);
+            this.pbx_ImgFundo.MinimumSize = new System.Drawing.Size(825, 465);
+            this.pbx_ImgFundo.Name = "pbx_ImgFundo";
+            this.pbx_ImgFundo.Size = new System.Drawing.Size(834, 465);
+            this.pbx_ImgFundo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_ImgFundo.TabIndex = 25;
+            this.pbx_ImgFundo.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(57, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 30);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Meu Perfil";
+            // 
             // FormUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(834, 461);
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.lblMail);
             this.Controls.Add(this.lblSbNome);
@@ -447,8 +490,9 @@
             this.Controls.Add(this.lblSobreNomeProfile);
             this.Controls.Add(this.lblNomeProfilePerfil);
             this.Controls.Add(this.lblUsuário);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pbx_FotoPerfil);
+            this.Controls.Add(this.pbx_ImgFundo);
             this.ForeColor = System.Drawing.Color.DimGray;
             this.Name = "FormUserProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -456,8 +500,9 @@
             this.Load += new System.EventHandler(this.FormUserProfile_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_FotoPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrarProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ImgFundo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,21 +527,22 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lnklblEdite;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblSobreNomeProfile;
         private System.Windows.Forms.Label lblNomeProfilePerfil;
         private System.Windows.Forms.Label lblUsuário;
         private System.Windows.Forms.Label lblCargoProfile;
         private System.Windows.Forms.LinkLabel linklblEditarProfile;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnEncerrarProfile;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPNome;
         private System.Windows.Forms.Label lblSbNome;
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.PictureBox pbx_ImgFundo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbx_FotoPerfil;
     }
 }

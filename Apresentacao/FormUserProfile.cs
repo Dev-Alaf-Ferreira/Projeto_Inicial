@@ -19,41 +19,12 @@ namespace Apresentacao
             InitializeComponent();
         }
 
-        private void lblLoginProfile_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUsuário_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormUserProfile_Load(object sender, EventArgs e)
         {
             loadUserData();
             initializePassEditControls();
         }
+
         private void loadUserData()
         {
             //View
@@ -73,7 +44,7 @@ namespace Apresentacao
         }
         private void initializePassEditControls()
         {
-            linklblEditarProfile.Text = "Edit";
+            lnklblEdite.Text = "Editar";
             txtNvSenha.UseSystemPasswordChar = true;
             txtNvSenha.Enabled = false;
             txtCfSenha.UseSystemPasswordChar = true;
@@ -85,28 +56,72 @@ namespace Apresentacao
             initializePassEditControls();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linklblEditarProfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (linklblEditarProfile.Text == "Editar")
+            panel1.Visible = true;
+            loadUserData();
+            btnEncerrarProfile.Visible = false;
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (txtNvSenha.Text.Length >= 5)
             {
-                .Text = "Cancel";
+                if (txtNvSenha.Text == txtCfSenha.Text)
+                {
+                    if (txtAtualSenha.Text == UserCache.Senha)
+                    {
+                        var userModel = new UserModel(
+                            usuario_ID: UserCache.UsuarioID,
+                            loginName: txtUserName.Text,
+                            senha: txtNvSenha.Text,
+                            primeiroNome: txtPNome.Text,
+                            sobreNome: txtSbNome.Text,
+                            cargo: null,
+                            email: txtEmail.Text);
+                        var result = userModel.editUserProfile();
+                        MessageBox.Show(result);
+                        reset();
+                        panel1.Visible = false;
+                    }
+                    else
+                        MessageBox.Show("Senha atual incorreta, tente novamente");
+                }
+                else
+                    MessageBox.Show("A senha não corresponde, tente novamente");
+            }
+            else
+                MessageBox.Show("A senha deve ter no mínimo 5 caracteres");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            panel1.Visible=false;
+            reset();
+            btnEncerrarProfile.Visible = true;
+        }
+
+        private void btnEncerrarProfile_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lnklblEdite_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if(lnklblEdite.Text == "Editar")
+            {
+                lnklblEdite.Text = "Cancelar";
                 txtNvSenha.Enabled = true;
                 txtNvSenha.Text = "";
                 txtCfSenha.Enabled = true;
                 txtCfSenha.Text = "";
             }
-            else if (LinkEditPass.Text == "Cancel")
+            else if (lnklblEdite.Text == "Cancelar")
             {
                 initializePassEditControls();
-                txtPassword.Text = UserCache.Password;
-                txtConfirmPass.Text = UserCache.Password;
+                txtNvSenha.Text = UserCache.Senha;
+                txtCfSenha.Text = UserCache.Senha;
             }
-        }
-
-        private void linklblEditarProfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            panel1.Visible = true;
-            loadUserData();
         }
     }
 }

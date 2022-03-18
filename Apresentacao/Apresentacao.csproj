@@ -99,10 +99,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1_Contatos.Designer.cs" />
-    <Compile Include="Form2_PerfilGeral.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2_PerfilGeral.Designer.cs" />
     <Compile Include="Form3_Agendamentos.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -15,21 +15,22 @@ namespace DataAccess
         public void editProfile(int Usuario_ID, string LoginName, string Senha, string PrimeiroNome, string SobreNome, string Email)
         {
             using (var connection = GetConnection())
-                connection.Open();
-            using(var command = new SqlCommand())
             {
-                command.Connection = connection;
-                command.CommandText = "update UsuariosAdm set" +
-                    "LoginName=@username, Senha=@senha, PrimeiroNome=@Pnome, SobreNome=@Sbnome, Email=@mail where Usuario_ID=@id";
-                command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@senha", senha);
-                command.Parameters.AddWithValue("@Pnome", Pnome);
-                command.Parameters.AddWithValue("@Sbnome", Sbnome);
-                command.Parameters.AddWithValue("@mail", mail);
-                command.Parameters.AddWithValue("@id", id);
-                command.CommandType = CommandType.Text;
-                command.ExecuteNonQuery();
-
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "update UsuariosAdm set " +
+                        "LoginName=@username, Senha=@senha, PrimeiroNome=@Pnome, SobreNome=@Sbnome, Email=@mail where Usuario_ID=@id";
+                    command.Parameters.AddWithValue("@username", LoginName);
+                    command.Parameters.AddWithValue("@senha", Senha);
+                    command.Parameters.AddWithValue("@Pnome", PrimeiroNome);
+                    command.Parameters.AddWithValue("@Sbnome", SobreNome);
+                    command.Parameters.AddWithValue("@mail", Email);
+                    command.Parameters.AddWithValue("@id", Usuario_ID);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
             }
         }
         public bool Login(string usuario, string senha)

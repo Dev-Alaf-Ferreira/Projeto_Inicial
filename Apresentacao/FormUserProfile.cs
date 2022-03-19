@@ -79,13 +79,13 @@ namespace Apresentacao
                     if (txtAtualSenha.Text == UserCache.Senha)
                     {
                         var userModel = new UserModel(
-                            usuario_ID: UserCache.UsuarioID,
-                            loginName: txtUserName.Text,
-                            senha: txtNvSenha.Text,
-                            primeiroNome: txtPNome.Text,
-                            sobreNome: txtSbNome.Text,
-                            cargo: null,
-                            email: txtEmail.Text);
+                            Usuario_ID: UserCache.UsuarioID,
+                            LoginName: txtUserName.Text,
+                            Senha: txtNvSenha.Text,
+                            PrimeiroNome: txtPNome.Text,
+                            SobreNome: txtSbNome.Text,
+                            Cargo: null,
+                            Email: txtEmail.Text);
                         var result = userModel.editUserProfile();
                         MessageBox.Show(result);
                         reset();

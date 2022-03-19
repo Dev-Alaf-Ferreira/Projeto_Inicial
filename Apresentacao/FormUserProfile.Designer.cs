@@ -283,8 +283,8 @@
             this.pbx_FotoPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pbx_FotoPerfil.Image")));
             this.pbx_FotoPerfil.Location = new System.Drawing.Point(13, 75);
             this.pbx_FotoPerfil.Name = "pbx_FotoPerfil";
-            this.pbx_FotoPerfil.Size = new System.Drawing.Size(212, 249);
-            this.pbx_FotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbx_FotoPerfil.Size = new System.Drawing.Size(240, 223);
+            this.pbx_FotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_FotoPerfil.TabIndex = 1;
             this.pbx_FotoPerfil.TabStop = false;
             // 
@@ -295,7 +295,7 @@
             this.lblEmail.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(228, 208);
+            this.lblEmail.Location = new System.Drawing.Point(260, 206);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(51, 17);
             this.lblEmail.TabIndex = 7;
@@ -308,7 +308,7 @@
             this.lblSobreNomeProfile.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblSobreNomeProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobreNomeProfile.ForeColor = System.Drawing.Color.White;
-            this.lblSobreNomeProfile.Location = new System.Drawing.Point(227, 163);
+            this.lblSobreNomeProfile.Location = new System.Drawing.Point(259, 161);
             this.lblSobreNomeProfile.Name = "lblSobreNomeProfile";
             this.lblSobreNomeProfile.Size = new System.Drawing.Size(86, 17);
             this.lblSobreNomeProfile.TabIndex = 6;
@@ -321,7 +321,7 @@
             this.lblNomeProfilePerfil.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblNomeProfilePerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeProfilePerfil.ForeColor = System.Drawing.Color.White;
-            this.lblNomeProfilePerfil.Location = new System.Drawing.Point(228, 119);
+            this.lblNomeProfilePerfil.Location = new System.Drawing.Point(260, 117);
             this.lblNomeProfilePerfil.Name = "lblNomeProfilePerfil";
             this.lblNomeProfilePerfil.Size = new System.Drawing.Size(52, 17);
             this.lblNomeProfilePerfil.TabIndex = 5;
@@ -334,7 +334,7 @@
             this.lblUsuário.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblUsuário.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuário.ForeColor = System.Drawing.Color.White;
-            this.lblUsuário.Location = new System.Drawing.Point(227, 77);
+            this.lblUsuário.Location = new System.Drawing.Point(259, 75);
             this.lblUsuário.Name = "lblUsuário";
             this.lblUsuário.Size = new System.Drawing.Size(58, 17);
             this.lblUsuário.TabIndex = 4;
@@ -347,7 +347,7 @@
             this.lblCargoProfile.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblCargoProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargoProfile.ForeColor = System.Drawing.Color.White;
-            this.lblCargoProfile.Location = new System.Drawing.Point(227, 250);
+            this.lblCargoProfile.Location = new System.Drawing.Point(259, 248);
             this.lblCargoProfile.Name = "lblCargoProfile";
             this.lblCargoProfile.Size = new System.Drawing.Size(54, 17);
             this.lblCargoProfile.TabIndex = 8;
@@ -359,7 +359,7 @@
             this.linklblEditarProfile.BackColor = System.Drawing.Color.Transparent;
             this.linklblEditarProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linklblEditarProfile.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linklblEditarProfile.Location = new System.Drawing.Point(76, 344);
+            this.linklblEditarProfile.Location = new System.Drawing.Point(89, 324);
             this.linklblEditarProfile.Name = "linklblEditarProfile";
             this.linklblEditarProfile.Size = new System.Drawing.Size(79, 17);
             this.linklblEditarProfile.TabIndex = 17;
@@ -386,11 +386,11 @@
             this.lblUser.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(228, 99);
+            this.lblUser.Location = new System.Drawing.Point(260, 97);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(62, 16);
+            this.lblUser.Size = new System.Drawing.Size(45, 16);
             this.lblUser.TabIndex = 20;
-            this.lblUser.Text = "usuario_ID";
+            this.lblUser.Text = "usuário";
             // 
             // lblPNome
             // 
@@ -399,7 +399,7 @@
             this.lblPNome.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblPNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPNome.ForeColor = System.Drawing.Color.White;
-            this.lblPNome.Location = new System.Drawing.Point(228, 142);
+            this.lblPNome.Location = new System.Drawing.Point(260, 140);
             this.lblPNome.Name = "lblPNome";
             this.lblPNome.Size = new System.Drawing.Size(81, 16);
             this.lblPNome.TabIndex = 21;
@@ -412,7 +412,7 @@
             this.lblSbNome.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblSbNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSbNome.ForeColor = System.Drawing.Color.White;
-            this.lblSbNome.Location = new System.Drawing.Point(228, 186);
+            this.lblSbNome.Location = new System.Drawing.Point(260, 184);
             this.lblSbNome.Name = "lblSbNome";
             this.lblSbNome.Size = new System.Drawing.Size(68, 16);
             this.lblSbNome.TabIndex = 22;
@@ -425,7 +425,7 @@
             this.lblMail.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblMail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMail.ForeColor = System.Drawing.Color.White;
-            this.lblMail.Location = new System.Drawing.Point(228, 231);
+            this.lblMail.Location = new System.Drawing.Point(260, 229);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(36, 16);
             this.lblMail.TabIndex = 23;
@@ -438,7 +438,7 @@
             this.lblCargo.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.White;
-            this.lblCargo.Location = new System.Drawing.Point(227, 270);
+            this.lblCargo.Location = new System.Drawing.Point(259, 268);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(39, 16);
             this.lblCargo.TabIndex = 24;

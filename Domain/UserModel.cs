@@ -20,20 +20,23 @@ namespace Domain
         private string Cargo;
         private string Email;
 
-        public UserModel(int usuario_ID, string loginName, string senha, string primeiroNome, string sobreNome, string cargo, string email)
+        public UserModel(int Usuario_ID, string LoginName, string Senha, string PrimeiroNome, string SobreNome, string Cargo, string Email)
         {
-            this.Usuario_ID = usuario_ID;
-            this.LoginName = loginName;
-            this.Senha = senha;
-            this.PrimeiroNome = primeiroNome;
-            this.SobreNome = sobreNome;
-            this.Cargo = cargo;
-            this.Email = email;
+            this.Usuario_ID = Usuario_ID;
+            this.LoginName = LoginName;
+            this.Senha = Senha;
+            this.PrimeiroNome = PrimeiroNome;
+            this.SobreNome = SobreNome;
+            this.Cargo = Cargo;
+            this.Email = Email;
         }
         public UserModel()
         {
 
         }
+        
+
+       
         
         public string editUserProfile()
         {

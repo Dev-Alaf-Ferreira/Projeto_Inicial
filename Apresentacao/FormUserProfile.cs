@@ -17,12 +17,19 @@ namespace Apresentacao
         public FormUserProfile()
         {
             InitializeComponent();
+            //botões transparentes código simples
+            /*button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.BackColor = Color.Transparent;*/
         }
 
         private void FormUserProfile_Load(object sender, EventArgs e)
         {
             loadUserData();
             initializePassEditControls();
+         
         }
 
         private void loadUserData()
@@ -108,7 +115,7 @@ namespace Apresentacao
 
         private void lnklblEdite_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(lnklblEdite.Text == "Editar")
+            if (lnklblEdite.Text == "Editar")
             {
                 lnklblEdite.Text = "Cancelar";
                 txtNvSenha.Enabled = true;

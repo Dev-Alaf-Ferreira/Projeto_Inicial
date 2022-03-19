@@ -36,7 +36,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtAtualSenha = new System.Windows.Forms.TextBox();
             this.txtCfSenha = new System.Windows.Forms.TextBox();
-            this.txtNvSenha = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSbNome = new System.Windows.Forms.TextBox();
             this.txtPNome = new System.Windows.Forms.TextBox();
@@ -56,12 +56,12 @@
             this.lblCargoProfile = new System.Windows.Forms.Label();
             this.linklblEditarProfile = new System.Windows.Forms.LinkLabel();
             this.btnEncerrarProfile = new System.Windows.Forms.PictureBox();
-            this.lblUser = new System.Windows.Forms.Label();
             this.lblPNome = new System.Windows.Forms.Label();
             this.lblSbNome = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_FotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrarProfile)).BeginInit();
@@ -76,7 +76,7 @@
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.txtAtualSenha);
             this.panel1.Controls.Add(this.txtCfSenha);
-            this.panel1.Controls.Add(this.txtNvSenha);
+            this.panel1.Controls.Add(this.txtSenha);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.txtSbNome);
             this.panel1.Controls.Add(this.txtPNome);
@@ -89,9 +89,9 @@
             this.panel1.Controls.Add(this.lblNomeProfile);
             this.panel1.Controls.Add(this.lblUserNameProfile);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(451, 0);
+            this.panel1.Location = new System.Drawing.Point(426, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(383, 461);
+            this.panel1.Size = new System.Drawing.Size(408, 461);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
             // 
@@ -159,13 +159,13 @@
             this.txtCfSenha.Size = new System.Drawing.Size(309, 23);
             this.txtCfSenha.TabIndex = 12;
             // 
-            // txtNvSenha
+            // txtSenha
             // 
-            this.txtNvSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNvSenha.Location = new System.Drawing.Point(31, 258);
-            this.txtNvSenha.Name = "txtNvSenha";
-            this.txtNvSenha.Size = new System.Drawing.Size(309, 23);
-            this.txtNvSenha.TabIndex = 11;
+            this.txtSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(31, 258);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(309, 23);
+            this.txtSenha.TabIndex = 11;
             // 
             // txtEmail
             // 
@@ -228,9 +228,9 @@
             this.lblNvSenhaProfile.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNvSenhaProfile.Location = new System.Drawing.Point(28, 238);
             this.lblNvSenhaProfile.Name = "lblNvSenhaProfile";
-            this.lblNvSenhaProfile.Size = new System.Drawing.Size(91, 17);
+            this.lblNvSenhaProfile.Size = new System.Drawing.Size(51, 17);
             this.lblNvSenhaProfile.TabIndex = 4;
-            this.lblNvSenhaProfile.Text = "Nova Senha:";
+            this.lblNvSenhaProfile.Text = "Senha:";
             // 
             // lblEmailProfile
             // 
@@ -379,19 +379,6 @@
             this.btnEncerrarProfile.TabStop = false;
             this.btnEncerrarProfile.Click += new System.EventHandler(this.btnEncerrarProfile_Click);
             // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.BackColor = System.Drawing.Color.Transparent;
-            this.lblUser.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(228, 99);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(62, 16);
-            this.lblUser.TabIndex = 20;
-            this.lblUser.Text = "usuario_ID";
-            // 
             // lblPNome
             // 
             this.lblPNome.AutoSize = true;
@@ -456,6 +443,20 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Meu Perfil";
             // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.White;
+            this.lblLogin.Location = new System.Drawing.Point(226, 99);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(83, 16);
+            this.lblLogin.TabIndex = 25;
+            this.lblLogin.Text = "usuario_Nome";
+            this.lblLogin.Click += new System.EventHandler(this.label3_Click);
+            // 
             // FormUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,11 +465,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.lblMail);
             this.Controls.Add(this.lblSbNome);
             this.Controls.Add(this.lblPNome);
-            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnEncerrarProfile);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linklblEditarProfile);
@@ -506,7 +507,7 @@
         private System.Windows.Forms.Label lblNvSenhaProfile;
         private System.Windows.Forms.TextBox txtAtualSenha;
         private System.Windows.Forms.TextBox txtCfSenha;
-        private System.Windows.Forms.TextBox txtNvSenha;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSbNome;
         private System.Windows.Forms.TextBox txtPNome;
@@ -522,12 +523,12 @@
         private System.Windows.Forms.Label lblCargoProfile;
         private System.Windows.Forms.LinkLabel linklblEditarProfile;
         private System.Windows.Forms.PictureBox btnEncerrarProfile;
-        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPNome;
         private System.Windows.Forms.Label lblSbNome;
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbx_FotoPerfil;
+        private System.Windows.Forms.Label lblLogin;
     }
 }

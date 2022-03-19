@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using Common.Cache;
-
+using DataAccess.SqlServer;
 
 namespace DataAccess
 {
     public class UserDao : ConnectionToSql
     {   
-        public void editProfile(int Usuario_ID, string LoginName, string Senha, string PrimeiroNome, string SobreNome, string Email)
+        public void editProfile(int id, string userName, string senha, string primeiroNome, string sobreNome, string email)
         {
             using (var connection = GetConnection())
             {
@@ -22,12 +22,12 @@ namespace DataAccess
                     command.Connection = connection;
                     command.CommandText = "update UsuariosAdm set " +
                         "LoginName=@username, Senha=@senha, PrimeiroNome=@Pnome, SobreNome=@Sbnome, Email=@mail where Usuario_ID=@id";
-                    command.Parameters.AddWithValue("@username", LoginName);
-                    command.Parameters.AddWithValue("@senha", Senha);
-                    command.Parameters.AddWithValue("@Pnome", PrimeiroNome);
-                    command.Parameters.AddWithValue("@Sbnome", SobreNome);
-                    command.Parameters.AddWithValue("@mail", Email);
-                    command.Parameters.AddWithValue("@id", Usuario_ID);
+                    command.Parameters.AddWithValue("@username", userName);
+                    command.Parameters.AddWithValue("@senha", senha);
+                    command.Parameters.AddWithValue("@Pnome", primeiroNome);
+                    command.Parameters.AddWithValue("@Sbnome", sobreNome);
+                    command.Parameters.AddWithValue("@mail", email);
+                    command.Parameters.AddWithValue("@id", id);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }

@@ -35,7 +35,7 @@ namespace Apresentacao
         private void loadUserData()
         {
             //View
-            lblLogin.Text = UserCache.LoginName;
+            lblUser.Text = UserCache.LoginName;
             lblPNome.Text = UserCache.PrimeiroNome;
             lblSbNome.Text = UserCache.SobreNome;
             lblMail.Text = UserCache.Email;
@@ -45,15 +45,15 @@ namespace Apresentacao
             txtPNome.Text = UserCache.PrimeiroNome;
             txtSbNome.Text = UserCache.SobreNome;
             txtEmail.Text = UserCache.Email;
-            txtSenha.Text = UserCache.Senha;
+            txtNvSenha.Text = UserCache.Senha;
             txtCfSenha.Text = UserCache.Senha;
             txtAtualSenha.Text = "";
         }
         private void initializePassEditControls()
         {
             lnklblEdite.Text = "Editar";
-            txtSenha.UseSystemPasswordChar = true;
-            txtSenha.Enabled = false;
+            txtNvSenha.UseSystemPasswordChar = true;
+            txtNvSenha.Enabled = false;
             txtCfSenha.UseSystemPasswordChar = true;
             txtCfSenha.Enabled = false;
         }
@@ -72,16 +72,16 @@ namespace Apresentacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtSenha.Text.Length >= 5)
+            if (txtNvSenha.Text.Length >= 5)
             {
-                if (txtSenha.Text == txtCfSenha.Text)
+                if (txtNvSenha.Text == txtCfSenha.Text)
                 {
                     if (txtAtualSenha.Text == UserCache.Senha)
                     {
                         var userModel = new UserModel(
                             usuario_ID: UserCache.UsuarioID,
                             loginName: txtUserName.Text,
-                            senha: txtSenha.Text,
+                            senha: txtNvSenha.Text,
                             primeiroNome: txtPNome.Text,
                             sobreNome: txtSbNome.Text,
                             cargo: null,
@@ -118,22 +118,17 @@ namespace Apresentacao
             if (lnklblEdite.Text == "Editar")
             {
                 lnklblEdite.Text = "Cancelar";
-                txtSenha.Enabled = true;
-                txtSenha.Text = "";
+                txtNvSenha.Enabled = true;
+                txtNvSenha.Text = "";
                 txtCfSenha.Enabled = true;
                 txtCfSenha.Text = "";
             }
             else if (lnklblEdite.Text == "Cancelar")
             {
                 initializePassEditControls();
-                txtSenha.Text = UserCache.Senha;
+                txtNvSenha.Text = UserCache.Senha;
                 txtCfSenha.Text = UserCache.Senha;
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

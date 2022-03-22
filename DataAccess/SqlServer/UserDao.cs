@@ -52,6 +52,8 @@ namespace DataAccess
                         while (reader.Read())
                         {
                             UserCache.UsuarioID = reader.GetInt32(0);
+                            UserCache.LoginName = reader.GetString(1);
+                            UserCache.Senha = reader.GetString(2);
                             UserCache.PrimeiroNome = reader.GetString(3);
                             UserCache.SobreNome = reader.GetString(4);
                             UserCache.Email = reader.GetString(5);

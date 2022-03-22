@@ -168,7 +168,13 @@ namespace Apresentacao
 
         private void btnPerfilGeral_MouseClick(object sender, MouseEventArgs e)
         {
-            
+            AbrirFormulario<FormUserProfile>();
+            btnPerfilGeral.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirFormulario<FormUserProfile>();
         }
         #endregion
         //METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL

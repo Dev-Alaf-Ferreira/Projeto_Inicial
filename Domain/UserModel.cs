@@ -12,23 +12,23 @@ namespace Domain
     {
         UserDao userDao = new UserDao();
         //Atributos
-        private int Usuario_ID;
-        private string LoginName;
-        private string Senha;
-        private string PrimeiroNome;
-        private string SobreNome;
-        private string Cargo;
-        private string Email;
+        private int usuario_ID;
+        private string loginName;
+        private string senha;
+        private string primeiroNome;
+        private string sobreNome;
+        private string cargo;
+        private string email;
 
-        public UserModel(int Usuario_ID, string LoginName, string Senha, string PrimeiroNome, string SobreNome, string Cargo, string Email)
+        public UserModel(int usuario_ID, string loginName, string senha, string primeiroNome, string sobreNome, string cargo, string email)
         {
-            this.Usuario_ID = Usuario_ID;
-            this.LoginName = LoginName;
-            this.Senha = Senha;
-            this.PrimeiroNome = PrimeiroNome;
-            this.SobreNome = SobreNome;
-            this.Cargo = Cargo;
-            this.Email = Email;
+            this.usuario_ID = usuario_ID;
+            this.loginName = loginName;
+            this.senha = senha;
+            this.primeiroNome = primeiroNome;
+            this.sobreNome = sobreNome;
+            this.cargo = cargo;
+            this.email = email;
         }
         public UserModel()
         {
@@ -43,8 +43,8 @@ namespace Domain
             
             try
             {
-                userDao.editProfile(Usuario_ID, LoginName, Senha, PrimeiroNome, SobreNome, Email);
-                LoginUser(LoginName, Senha);
+                userDao.editProfile(usuario_ID, loginName, senha, primeiroNome, sobreNome, email);
+                LoginUser(loginName, senha);
                 return "Perfil atualizado com sucesso";
             }
             catch(Exception ex)
@@ -56,18 +56,18 @@ namespace Domain
         {
             return userDao.Login(usuario, senha);
         }
-        public string RecuperarSenha(string userRequesting)
+        public string Recuperarsenha(string userRequesting)
         {
             return userDao.RecuperarSenha(userRequesting);
         }
         /*public void AnyMethod()
         {
             //Seguranças e Permissões
-            if (UserCache.Cargo == Cargo.Administrador)
+            if (UserCache.cargo == cargo.Administrador)
             {
                 //Codes
             }
-            if (UserCache.Cargo == Cargo.Recepcionista || UserCache.Cargo == Cargo.Administracao || UserCache.Cargo == Cargo.Designer || UserCache.Cargo == Cargo.Contador)
+            if (UserCache.cargo == cargo.Recepcionista || UserCache.cargo == cargo.Administracao || UserCache.cargo == cargo.Designer || UserCache.cargo == cargo.Contador)
             {
                 //Codes
             }

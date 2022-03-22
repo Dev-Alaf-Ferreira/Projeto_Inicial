@@ -49,6 +49,7 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.linkPerfil = new System.Windows.Forms.LinkLabel();
             this.panelContenedor.SuspendLayout();
             this.panelformularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Img_MenuPrincipal)).BeginInit();
@@ -155,6 +156,7 @@
             // panelPerfil
             // 
             this.panelPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(75)))));
+            this.panelPerfil.Controls.Add(this.linkPerfil);
             this.panelPerfil.Controls.Add(this.btnOpcoes);
             this.panelPerfil.Controls.Add(this.lblEmail);
             this.panelPerfil.Controls.Add(this.lblNome);
@@ -183,7 +185,7 @@
             this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEmail.Location = new System.Drawing.Point(3, 104);
+            this.lblEmail.Location = new System.Drawing.Point(95, 79);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(39, 16);
             this.lblEmail.TabIndex = 3;
@@ -195,7 +197,7 @@
             this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNome.Location = new System.Drawing.Point(95, 40);
+            this.lblNome.Location = new System.Drawing.Point(95, 19);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(39, 16);
             this.lblNome.TabIndex = 0;
@@ -207,7 +209,7 @@
             this.lblCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCargo.Location = new System.Drawing.Point(95, 72);
+            this.lblCargo.Location = new System.Drawing.Point(93, 49);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(41, 16);
             this.lblCargo.TabIndex = 0;
@@ -356,6 +358,17 @@
             this.btnFechar.TabStop = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // linkPerfil
+            // 
+            this.linkPerfil.AutoSize = true;
+            this.linkPerfil.Location = new System.Drawing.Point(12, 107);
+            this.linkPerfil.Name = "linkPerfil";
+            this.linkPerfil.Size = new System.Drawing.Size(36, 13);
+            this.linkPerfil.TabIndex = 1;
+            this.linkPerfil.TabStop = true;
+            this.linkPerfil.Text = "Perfil1";
+            this.linkPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPerfil_LinkClicked);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,6 +421,7 @@
         private System.Windows.Forms.Button btnDeslogar;
         private System.Windows.Forms.Button btnOpcoes;
         private System.Windows.Forms.Button btnConsultas;
+        private System.Windows.Forms.LinkLabel linkPerfil;
     }
 }
 

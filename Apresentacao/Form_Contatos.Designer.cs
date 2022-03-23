@@ -40,13 +40,16 @@
             this.txt_Telefone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEncerraContatos = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerraContatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btnEncerraContatos);
             this.panel1.Controls.Add(this.txt_Telefone);
             this.panel1.Controls.Add(this.label2);
@@ -60,7 +63,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1112, 603);
+            this.panel1.Size = new System.Drawing.Size(1084, 581);
             this.panel1.TabIndex = 0;
             // 
             // txtEmail
@@ -155,7 +158,7 @@
             // 
             this.btnEncerraContatos.BackColor = System.Drawing.SystemColors.Control;
             this.btnEncerraContatos.Image = ((System.Drawing.Image)(resources.GetObject("btnEncerraContatos.Image")));
-            this.btnEncerraContatos.Location = new System.Drawing.Point(1083, 12);
+            this.btnEncerraContatos.Location = new System.Drawing.Point(704, 12);
             this.btnEncerraContatos.Name = "btnEncerraContatos";
             this.btnEncerraContatos.Size = new System.Drawing.Size(17, 17);
             this.btnEncerraContatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,12 +166,21 @@
             this.btnEncerraContatos.TabStop = false;
             this.btnEncerraContatos.Click += new System.EventHandler(this.btnEncerrarProfile_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 243);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(718, 335);
+            this.dataGridView1.TabIndex = 23;
+            // 
             // Form_Contatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1112, 603);
+            this.ClientSize = new System.Drawing.Size(1084, 581);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -179,6 +191,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerraContatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,5 +209,6 @@
         private System.Windows.Forms.TextBox txt_Telefone;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnEncerraContatos;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

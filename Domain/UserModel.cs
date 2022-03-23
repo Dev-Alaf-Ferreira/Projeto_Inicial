@@ -34,10 +34,16 @@ namespace Domain
         {
 
         }
-        
 
-       
-        
+        UserDao userDao1 = new UserDao();
+        //Atributos editConsultas
+        private int id_contatos;
+        private string nome;
+        private string endereco;
+        private string telefone;
+        private string Email;
+        /// /
+        /// 
         public string editUserProfile()
         {
             
@@ -50,6 +56,20 @@ namespace Domain
             catch(Exception ex)
             {
                 return "Usuário já está registrado, tente novamente";
+            }
+        }
+        public string editUserConsultas()
+        {
+
+            try
+            {
+                userDao1.editConsultas(id_contatos, nome, endereco, telefone, Email);
+                LoginUser(loginName, senha);
+                return "Consulta atualizada com sucesso";
+            }
+            catch (Exception ex)
+            {
+                return "Usuário não existente, tente novamente";
             }
         }
         public bool LoginUser(string usuario, string senha)

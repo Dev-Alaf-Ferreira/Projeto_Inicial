@@ -104,6 +104,26 @@ namespace DataAccess
                 }
             }
         }
+        public void editConsultas(int id_contatos, string nome, string endereco, string telefone, string email)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "update Contatos set " +
+                        "@Nome = @nome, @Endereco = @endereco, @telefone = @telefone, @Email = @email where @id_Contatos = @id_contatos";
+                    command.Parameters.AddWithValue("@nome", nome);
+                    command.Parameters.AddWithValue("@endereço", endereco);
+                    command.Parameters.AddWithValue("@telefone", telefone);
+                    command.Parameters.AddWithValue("@email", email);
+                    command.Parameters.AddWithValue("@id_contatos", id_contatos);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
         public void AnyMethod()
         {
             if (UserCache.Cargo == Cargo.Administrador)

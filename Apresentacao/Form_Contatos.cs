@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Apresentacao
 {
@@ -16,7 +17,7 @@ namespace Apresentacao
         {
             InitializeComponent();
         }
-
+        
         private void txtPNome_TextChanged(object sender, EventArgs e)
         {
 

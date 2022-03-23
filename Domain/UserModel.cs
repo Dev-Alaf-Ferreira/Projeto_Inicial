@@ -60,17 +60,17 @@ namespace Domain
         {
             return userDao.RecuperarSenha(userRequesting);
         }
-        /*public void AnyMethod()
+        public void AnyMethod()
         {
             //Seguranças e Permissões
-            if (UserCache.cargo == cargo.Administrador)
+            if (UserCache.Cargo == Cargo.Administrador)
             {
                 //Codes
             }
-            if (UserCache.cargo == cargo.Recepcionista || UserCache.cargo == cargo.Administracao || UserCache.cargo == cargo.Designer || UserCache.cargo == cargo.Contador)
+            if (UserCache.Cargo == Cargo.Recepcionista || UserCache.Cargo == Cargo.Administracao || UserCache.Cargo == Cargo.Designer || UserCache.Cargo == Cargo.Contador)
             {
                 //Codes
             }
-        }*/
+        }
     }
 }

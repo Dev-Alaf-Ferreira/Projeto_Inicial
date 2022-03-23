@@ -95,10 +95,6 @@
     <Compile Include="Comercial\MainMenuComerc.Designer.cs">
       <DependentUpon>MainMenuComerc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1_Contatos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1_Contatos.Designer.cs" />
     <Compile Include="Form3_Agendamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,10 +133,16 @@
     <Compile Include="FormUserProfile.Designer.cs">
       <DependentUpon>FormUserProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Contatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Contatos.Designer.cs">
+      <DependentUpon>Form_Contatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1_Contatos.resx">
-      <DependentUpon>Form1_Contatos.cs</DependentUpon>
+    <EmbeddedResource Include="Comercial\MainMenuComerc.resx">
+      <DependentUpon>MainMenuComerc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBoasVindas.resx">
       <DependentUpon>FormBoasVindas.cs</DependentUpon>
@@ -156,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserProfile.resx">
       <DependentUpon>FormUserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Contatos.resx">
+      <DependentUpon>Form_Contatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -16,14 +16,15 @@ namespace Apresentacao
     {
         public FormPrincipal()
         {
-            InitializeComponent();
-        }
 
+            InitializeComponent();
+
+        }
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             LoadUserData();
             ManagePermissions();
-            
+
         }
         private void ManagePermissions()
         {
@@ -132,17 +133,7 @@ namespace Apresentacao
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Form1_Contatos>();
-            btnContatos.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FormUserProfile>();
-            btnPerfilGeral.BackColor = Color.FromArgb(12, 61, 92);
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -166,16 +157,25 @@ namespace Apresentacao
             btnConsultas.BackColor = Color.FromArgb(12, 61, 92);
         }
 
-        private void btnPerfilGeral_MouseClick(object sender, MouseEventArgs e)
+        private void btnPerfilGeral_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FormUserProfile>();
-            btnPerfilGeral.BackColor = Color.FromArgb(12, 61, 92);
+      
+                AbrirFormulario<FormUserProfile>();
+                btnPerfilGeral.BackColor = Color.FromArgb(12, 61, 92);
+
         }
 
-        private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnContatos_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FormUserProfile>();
+            AbrirFormulario<Form_Contatos>();
+            btnContatos.BackColor = Color.FromArgb(12, 61, 92);
         }
+
+        private void panelBarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         #endregion
         //METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL
         private void AbrirFormulario<MiForm>() where MiForm : Form, new() {

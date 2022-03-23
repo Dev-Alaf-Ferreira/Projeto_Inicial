@@ -29,7 +29,7 @@ namespace Apresentacao
         {
             loadUserData();
             initializePassEditControls();
-         
+
         }
 
         private void loadUserData()
@@ -99,6 +99,7 @@ namespace Apresentacao
             }
             else
                 MessageBox.Show("A senha deve ter no mínimo 5 caracteres");
+            btnEncerrarProfile.Visible = true;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

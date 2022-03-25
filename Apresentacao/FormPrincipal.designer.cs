@@ -171,7 +171,7 @@
             this.btnOpcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpcoes.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpcoes.Image = ((System.Drawing.Image)(resources.GetObject("btnOpcoes.Image")));
-            this.btnOpcoes.Location = new System.Drawing.Point(153, 0);
+            this.btnOpcoes.Location = new System.Drawing.Point(151, -1);
             this.btnOpcoes.Name = "btnOpcoes";
             this.btnOpcoes.Size = new System.Drawing.Size(35, 35);
             this.btnOpcoes.TabIndex = 1;
@@ -183,7 +183,7 @@
             this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEmail.Location = new System.Drawing.Point(3, 104);
+            this.lblEmail.Location = new System.Drawing.Point(3, 108);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(39, 16);
             this.lblEmail.TabIndex = 3;
@@ -195,7 +195,7 @@
             this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNome.Location = new System.Drawing.Point(99, 43);
+            this.lblNome.Location = new System.Drawing.Point(101, 42);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(39, 16);
             this.lblNome.TabIndex = 0;
@@ -207,7 +207,7 @@
             this.lblCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCargo.Location = new System.Drawing.Point(98, 73);
+            this.lblCargo.Location = new System.Drawing.Point(102, 73);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(41, 16);
             this.lblCargo.TabIndex = 0;
@@ -216,10 +216,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(6, 7);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(94, 96);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 

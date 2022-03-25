@@ -5,19 +5,19 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("Apresentacao")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("FazenTech")]
+[assembly: AssemblyDescription("Gestão de Fazenda e recursos e Agro-Tecnologia")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Apresentacao")]
+[assembly: AssemblyProduct("FazenTech-Inovação")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Dev System Tech")]
 [assembly: AssemblyCulture("")]
 
 // Definir ComVisible como false torna os tipos neste assembly invisíveis
 // para componentes COM. Caso precise acessar um tipo neste assembly de
 // COM, defina o atributo ComVisible como true nesse tipo.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
 [assembly: Guid("dab70406-b305-4270-a947-5c9a7fca145e")]

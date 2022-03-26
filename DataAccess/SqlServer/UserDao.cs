@@ -105,23 +105,26 @@ namespace DataAccess
                 }
             }
         }
-        public void editConsultas(int id_contatos, string nome, string endereco, string telefone, string email)
+        public DataTable editConsultas(int id_contatos, string nome, string endereco, string telefone, string email)
         {
             using (var connection = GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
+                    DataTable dt = new DataTable();
                     command.Connection = connection;
-                    command.CommandText = "insert into Contatos(id_Contatos, nome, endereco, telefone, email) Values (@id_contatos, @nome, @endereco, @telefone, @email)";
+                    command.CommandText = "ListaConsulta";
                     command.Parameters.AddWithValue("@nome", nome);
-                    command.Parameters.AddWithValue("@endereco", endereco);
+                    command.Parameters.AddWithValue("@endereço", endereco);
                     command.Parameters.AddWithValue("@telefone", telefone);
                     command.Parameters.AddWithValue("@email", email);
                     command.Parameters.AddWithValue("@id_contatos", id_contatos);
-                    command.CommandType = CommandType.Text;
+                    command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
+                    command.Parameters.Clear();
 
+                    return dt;
                 }
             }
         }

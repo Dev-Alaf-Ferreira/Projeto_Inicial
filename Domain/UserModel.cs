@@ -34,7 +34,7 @@ namespace Domain
         {
 
         }
-
+        ///Consultas
         public UserModel(int id_contatos, string nome, string endereco, string telefone, string Email)
         {
             this.id_contatos = id_contatos;
@@ -74,11 +74,11 @@ namespace Domain
             {
                 userDao1.editConsultas(id_contatos, nome, endereco, telefone, Email);
                 LoginUser(loginName, senha);
-                return "Consulta atualizada com sucesso";
+                return "Registro atualizado com sucesso";
             }
             catch (Exception ex)
             {
-                return "Usuário não existente, tente novamente";
+                return "Registro não existente, tente novamente";
             }
         }
         public bool LoginUser(string usuario, string senha)

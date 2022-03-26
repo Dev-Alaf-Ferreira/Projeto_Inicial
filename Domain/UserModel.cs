@@ -35,6 +35,15 @@ namespace Domain
 
         }
 
+        public UserModel(int id_contatos, string nome, string endereco, string telefone, string Email)
+        {
+            this.id_contatos = id_contatos;
+            this.nome = nome;
+            this.endereco = endereco;
+            this.telefone = telefone;
+            this.Email = Email;
+        }
+
         UserDao userDao1 = new UserDao();
         //Atributos editConsultas
         private int id_contatos;

@@ -293,11 +293,11 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(260, 206);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 17);
+            this.lblEmail.Size = new System.Drawing.Size(52, 16);
             this.lblEmail.TabIndex = 7;
             this.lblEmail.Text = "E-mail:";
             // 
@@ -306,11 +306,11 @@
             this.lblSobreNomeProfile.AutoSize = true;
             this.lblSobreNomeProfile.BackColor = System.Drawing.Color.Transparent;
             this.lblSobreNomeProfile.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblSobreNomeProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobreNomeProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobreNomeProfile.ForeColor = System.Drawing.Color.White;
             this.lblSobreNomeProfile.Location = new System.Drawing.Point(259, 161);
             this.lblSobreNomeProfile.Name = "lblSobreNomeProfile";
-            this.lblSobreNomeProfile.Size = new System.Drawing.Size(86, 17);
+            this.lblSobreNomeProfile.Size = new System.Drawing.Size(84, 16);
             this.lblSobreNomeProfile.TabIndex = 6;
             this.lblSobreNomeProfile.Text = "Sobrenome:";
             // 
@@ -319,11 +319,11 @@
             this.lblNomeProfilePerfil.AutoSize = true;
             this.lblNomeProfilePerfil.BackColor = System.Drawing.Color.Transparent;
             this.lblNomeProfilePerfil.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblNomeProfilePerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeProfilePerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeProfilePerfil.ForeColor = System.Drawing.Color.White;
             this.lblNomeProfilePerfil.Location = new System.Drawing.Point(260, 117);
             this.lblNomeProfilePerfil.Name = "lblNomeProfilePerfil";
-            this.lblNomeProfilePerfil.Size = new System.Drawing.Size(52, 17);
+            this.lblNomeProfilePerfil.Size = new System.Drawing.Size(49, 16);
             this.lblNomeProfilePerfil.TabIndex = 5;
             this.lblNomeProfilePerfil.Text = "Nome:";
             // 
@@ -332,11 +332,11 @@
             this.lblUsuário.AutoSize = true;
             this.lblUsuário.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuário.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblUsuário.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuário.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuário.ForeColor = System.Drawing.Color.White;
             this.lblUsuário.Location = new System.Drawing.Point(259, 75);
             this.lblUsuário.Name = "lblUsuário";
-            this.lblUsuário.Size = new System.Drawing.Size(58, 17);
+            this.lblUsuário.Size = new System.Drawing.Size(59, 16);
             this.lblUsuário.TabIndex = 4;
             this.lblUsuário.Text = "Usuário:";
             // 
@@ -345,11 +345,11 @@
             this.lblCargoProfile.AutoSize = true;
             this.lblCargoProfile.BackColor = System.Drawing.Color.Transparent;
             this.lblCargoProfile.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblCargoProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargoProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargoProfile.ForeColor = System.Drawing.Color.White;
             this.lblCargoProfile.Location = new System.Drawing.Point(259, 248);
             this.lblCargoProfile.Name = "lblCargoProfile";
-            this.lblCargoProfile.Size = new System.Drawing.Size(54, 17);
+            this.lblCargoProfile.Size = new System.Drawing.Size(52, 16);
             this.lblCargoProfile.TabIndex = 8;
             this.lblCargoProfile.Text = "Cargo:";
             // 
@@ -384,11 +384,11 @@
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
             this.lblUser.Location = new System.Drawing.Point(260, 97);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(45, 16);
+            this.lblUser.Size = new System.Drawing.Size(47, 15);
             this.lblUser.TabIndex = 20;
             this.lblUser.Text = "usuário";
             // 
@@ -397,11 +397,11 @@
             this.lblPNome.AutoSize = true;
             this.lblPNome.BackColor = System.Drawing.Color.Transparent;
             this.lblPNome.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblPNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPNome.ForeColor = System.Drawing.Color.White;
             this.lblPNome.Location = new System.Drawing.Point(260, 140);
             this.lblPNome.Name = "lblPNome";
-            this.lblPNome.Size = new System.Drawing.Size(81, 16);
+            this.lblPNome.Size = new System.Drawing.Size(83, 15);
             this.lblPNome.TabIndex = 21;
             this.lblPNome.Text = "primeiroNome";
             // 
@@ -410,11 +410,11 @@
             this.lblSbNome.AutoSize = true;
             this.lblSbNome.BackColor = System.Drawing.Color.Transparent;
             this.lblSbNome.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblSbNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSbNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSbNome.ForeColor = System.Drawing.Color.White;
             this.lblSbNome.Location = new System.Drawing.Point(260, 184);
             this.lblSbNome.Name = "lblSbNome";
-            this.lblSbNome.Size = new System.Drawing.Size(68, 16);
+            this.lblSbNome.Size = new System.Drawing.Size(69, 15);
             this.lblSbNome.TabIndex = 22;
             this.lblSbNome.Text = "sobreNome";
             // 
@@ -423,11 +423,11 @@
             this.lblMail.AutoSize = true;
             this.lblMail.BackColor = System.Drawing.Color.Transparent;
             this.lblMail.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblMail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMail.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMail.ForeColor = System.Drawing.Color.White;
             this.lblMail.Location = new System.Drawing.Point(260, 229);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(36, 16);
+            this.lblMail.Size = new System.Drawing.Size(36, 15);
             this.lblMail.TabIndex = 23;
             this.lblMail.Text = "email";
             // 
@@ -436,11 +436,11 @@
             this.lblCargo.AutoSize = true;
             this.lblCargo.BackColor = System.Drawing.Color.Transparent;
             this.lblCargo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.White;
             this.lblCargo.Location = new System.Drawing.Point(259, 268);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(39, 16);
+            this.lblCargo.Size = new System.Drawing.Size(39, 15);
             this.lblCargo.TabIndex = 24;
             this.lblCargo.Text = "cargo";
             // 
@@ -450,7 +450,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(57, 17);
+            this.label2.Location = new System.Drawing.Point(62, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 38);
             this.label2.TabIndex = 18;

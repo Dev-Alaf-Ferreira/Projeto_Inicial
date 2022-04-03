@@ -146,10 +146,11 @@
             // txtAtualSenha
             // 
             this.txtAtualSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAtualSenha.Location = new System.Drawing.Point(31, 344);
+            this.txtAtualSenha.Location = new System.Drawing.Point(32, 344);
             this.txtAtualSenha.Name = "txtAtualSenha";
             this.txtAtualSenha.Size = new System.Drawing.Size(309, 23);
             this.txtAtualSenha.TabIndex = 13;
+            this.txtAtualSenha.UseSystemPasswordChar = true;
             // 
             // txtCfSenha
             // 
@@ -297,7 +298,7 @@
             this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(260, 206);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(52, 16);
+            this.lblEmail.Size = new System.Drawing.Size(53, 16);
             this.lblEmail.TabIndex = 7;
             this.lblEmail.Text = "E-mail:";
             // 
@@ -310,7 +311,7 @@
             this.lblSobreNomeProfile.ForeColor = System.Drawing.Color.White;
             this.lblSobreNomeProfile.Location = new System.Drawing.Point(259, 161);
             this.lblSobreNomeProfile.Name = "lblSobreNomeProfile";
-            this.lblSobreNomeProfile.Size = new System.Drawing.Size(84, 16);
+            this.lblSobreNomeProfile.Size = new System.Drawing.Size(85, 16);
             this.lblSobreNomeProfile.TabIndex = 6;
             this.lblSobreNomeProfile.Text = "Sobrenome:";
             // 
@@ -323,7 +324,7 @@
             this.lblNomeProfilePerfil.ForeColor = System.Drawing.Color.White;
             this.lblNomeProfilePerfil.Location = new System.Drawing.Point(260, 117);
             this.lblNomeProfilePerfil.Name = "lblNomeProfilePerfil";
-            this.lblNomeProfilePerfil.Size = new System.Drawing.Size(49, 16);
+            this.lblNomeProfilePerfil.Size = new System.Drawing.Size(50, 16);
             this.lblNomeProfilePerfil.TabIndex = 5;
             this.lblNomeProfilePerfil.Text = "Nome:";
             // 
@@ -336,7 +337,7 @@
             this.lblUsuário.ForeColor = System.Drawing.Color.White;
             this.lblUsuário.Location = new System.Drawing.Point(259, 75);
             this.lblUsuário.Name = "lblUsuário";
-            this.lblUsuário.Size = new System.Drawing.Size(59, 16);
+            this.lblUsuário.Size = new System.Drawing.Size(60, 16);
             this.lblUsuário.TabIndex = 4;
             this.lblUsuário.Text = "Usuário:";
             // 
@@ -349,7 +350,7 @@
             this.lblCargoProfile.ForeColor = System.Drawing.Color.White;
             this.lblCargoProfile.Location = new System.Drawing.Point(259, 248);
             this.lblCargoProfile.Name = "lblCargoProfile";
-            this.lblCargoProfile.Size = new System.Drawing.Size(52, 16);
+            this.lblCargoProfile.Size = new System.Drawing.Size(53, 16);
             this.lblCargoProfile.TabIndex = 8;
             this.lblCargoProfile.Text = "Cargo:";
             // 

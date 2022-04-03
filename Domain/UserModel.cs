@@ -35,13 +35,14 @@ namespace Domain
 
         }
 
-        public UserModel(int id_contatos, string nome, string endereco, string telefone, string Email)
+
+        public UserModel(int id_contatos, string nome, string endereco, string telefone, string Emaiil)
         {
             this.id_contatos = id_contatos;
             this.nome = nome;
             this.endereco = endereco;
             this.telefone = telefone;
-            this.Email = Email;
+            this.Emaiil = Emaiil;
         }
 
         UserDao userDao1 = new UserDao();
@@ -50,7 +51,7 @@ namespace Domain
         private string nome;
         private string endereco;
         private string telefone;
-        private string Email;
+        private string Emaiil;
         /// /
         /// 
         public string editUserProfile()
@@ -72,13 +73,12 @@ namespace Domain
 
             try
             {
-                userDao1.editConsultas(id_contatos, nome, endereco, telefone, Email);
-                LoginUser(loginName, senha);
-                return "Consulta atualizada com sucesso";
+                userDao1.editConsultas(id_contatos, nome, endereco, telefone, Emaiil);
+                return "Registro atualizada com sucesso";
             }
             catch (Exception ex)
             {
-                return "Usuário não existente, tente novamente";
+                return "Registro não inserido, tente novamente";
             }
         }
         public bool LoginUser(string usuario, string senha)

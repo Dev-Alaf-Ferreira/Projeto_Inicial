@@ -14,7 +14,7 @@ namespace DataAccess
 
         public ConnectionToSql()
         {
-            connectionString = "Server=(local)\\SQLEXPRESS; Database= FazenTech; integrated security= true";
+            connectionString = @"Server=DESKTOP-59VQBSA\SQLEXPRESS; Database= FazenTech; integrated security= true";
         }
         protected SqlConnection GetConnection()
         {

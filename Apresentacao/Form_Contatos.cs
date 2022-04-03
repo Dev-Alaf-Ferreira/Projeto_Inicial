@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Domain;
 using Common.Cache;
 
 namespace Apresentacao
@@ -17,11 +18,25 @@ namespace Apresentacao
     {
         public Form_Contatos()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            loadUserData();
 
         }
-        private void txtPNome_TextChanged(object sender, EventArgs e)
+        private void loadUserData()
         {
+
+            //view data grid Panel
+            txtNomeCompleto.Text = UserCache.Nome_Completo;
+            txtEmaiil.Text = UserCache.Emaiil;
+            txt_endereco.Text = UserCache.Endereco;
+            txt_Telefone.Text = UserCache.Telefone;
+
+        }
+
+        private void Form_Contatos_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'fazenTechDataSet.Contatos'. Você pode movê-la ou removê-la conforme necessário.
+            this.contatosTableAdapter.Fill(this.fazenTechDataSet.Contatos);
             
         }
 
@@ -30,45 +45,38 @@ namespace Apresentacao
             this.Close();
         }
 
-        private void Form_Contatos_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'fazenTechDataSet.ListaConsulta'. Você pode movê-la ou removê-la conforme necessário.
-            this.listaConsultaTableAdapter.Fill(this.fazenTechDataSet.ListaConsulta);
-
-        }
-
         private void btnNewContato_Click(object sender, EventArgs e)
         {
-            txtPNome.Text = "";
-            txtSbNome.Text = "";
-            txtEmail.Text = "";
+            txtNomeCompleto.Text = "";
+            txtEmaiil.Text = "";
             txt_Telefone.Text = "";
-            txtPNome.Focus();
+            txt_endereco.Text = "";
+            txtNomeCompleto.Focus();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtNomeCompleto.Text != "" && txt_Telefone.Text != "" && txt_endereco.Text != "" && txtEmaiil.Text != "")
+            {
 
-                if (txtPNome.Text != "" && txtSbNome.Text != "" && txt_Telefone.Text != "" && txtEmail.Text != "")
-                {
-                    
-                    
-                 var userModel = new UserModel(
-                    usuario_ID: UserCache.UsuarioID,
-                    loginName: txtUserName.Text,
-                    senha: txtNvSenha.Text,
-                    primeiroNome: txtPNome.Text,
-                    sobreNome: txtSbNome.Text,
-                    cargo: null,
-                    email: txtEmail.Text);
-                 var result = userModel.editUserProfile();
-                    MessageBox.Show(result);
+                var userModel = new UserModel(
+                   id_contatos: UserCache.id_Contatos,
+                   nome: txtNomeCompleto.Text,
+                   telefone: txt_Telefone.Text,
+                   endereco: txt_endereco.Text,
+                   Emaiil: txtEmaiil.Text);
+                var result = userModel.editUserConsultas();
+                MessageBox.Show(result);
 
-                }
-                else
-                    MessageBox.Show("A senha não corresponde, tente novamente");
-                btnEncerraContatos.Visible = true;
-        
+            }
+            else
+                MessageBox.Show("Registro não foi salvo, tente novamente");
+            btnEncerraContatos.Visible = true;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

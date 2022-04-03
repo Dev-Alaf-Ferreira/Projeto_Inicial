@@ -21,7 +21,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "update UsuariosAdm set " +
+                    command.CommandText = "update Users set " +
                         "LoginName=@username, Senha=@senha, PrimeiroNome=@Pnome, SobreNome=@Sbnome, Email=@mail where Usuario_ID=@id";
                     command.Parameters.AddWithValue("@username", loginName);
                     command.Parameters.AddWithValue("@senha", senha);
@@ -42,7 +42,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from UsuariosAdm where LoginName = @usuario and Senha = @senha";
+                    command.CommandText = "select * from Users where LoginName = @usuario and Senha = @senha";
                     command.Parameters.AddWithValue("@usuario", usuario);
                     command.Parameters.AddWithValue("@senha", senha);
                     command.CommandType = CommandType.Text;
@@ -52,13 +52,14 @@ namespace DataAccess
 
                         while (reader.Read())
                         {
-                            UserCache.UsuarioID = reader.GetInt32(0);
+                            UserCache.Usuario_ID = reader.GetInt32(0);
                             UserCache.LoginName = reader.GetString(1);
                             UserCache.Senha = reader.GetString(2);
                             UserCache.PrimeiroNome = reader.GetString(3);
                             UserCache.SobreNome = reader.GetString(4);
-                            UserCache.Email = reader.GetString(5);
-                            UserCache.Cargo = reader.GetString(6);
+                            UserCache.Cargo = reader.GetString(5);
+                            UserCache.Email = reader.GetString(6);
+                            
                         }
                         return true;
                     }
@@ -77,7 +78,7 @@ namespace DataAccess
                 using(var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from UsuariosAdm where LoginName= @usuario or Email=@mail";
+                    command.CommandText = "select * from Users where LoginName= @usuario or Email=@mail";
                     command.Parameters.AddWithValue("@usuario", userRequesting);
                     command.Parameters.AddWithValue("@mail", userRequesting);
                     command.CommandType= CommandType.Text;
@@ -86,7 +87,7 @@ namespace DataAccess
                     if (reader.Read() == true)
                     {
                         string usuarioName = reader.GetString(3) + " " + reader.GetString(4);
-                        string usuarioMail = reader.GetString(5);
+                        string usuarioMail = reader.GetString(6);
                         string contaSenha = reader.GetString(2);
 
                         var mailService = new MailServices.SystemSupportMail();
@@ -101,30 +102,30 @@ namespace DataAccess
                                "\nNo entanto, pedimos que você altere sua senha imediatamente assim que entrar no sistema";
                     }
                     else
-                        return "Sorry, you do not have an account with that mail or username";
+                        return "Desculpe, você não tem uma conta com esse e-mail ou nome de usuário";
                 }
             }
         }
-        public DataTable editConsultas(int id_contatos, string nome, string endereco, string telefone, string email)
+        public void editConsultas(int id_contatos, string nome, string endereco, string telefone, string email)
         {
             using (var connection = GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
-                    DataTable dt = new DataTable();
+
                     command.Connection = connection;
-                    command.CommandText = "ListaConsulta";
-                    command.Parameters.AddWithValue("@nome", nome);
+                    command.CommandText = "insert into Contatos(Nome_Completo, Endereco, Telefone, Emaiil) " +
+                    " values (@nome_completo, @endereco, @telefone, @emaiil) ";
+                    command.Parameters.AddWithValue("@nome_completo", nome);
                     command.Parameters.AddWithValue("@endereço", endereco);
                     command.Parameters.AddWithValue("@telefone", telefone);
-                    command.Parameters.AddWithValue("@email", email);
+                    command.Parameters.AddWithValue("@emaiil", email);
                     command.Parameters.AddWithValue("@id_contatos", id_contatos);
-                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                     command.Parameters.Clear();
 
-                    return dt;
                 }
             }
         }

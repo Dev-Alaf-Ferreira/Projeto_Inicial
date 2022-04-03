@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,9 +31,9 @@ namespace Apresentacao
         private void timer1_Tick(object sender, EventArgs e)
         {
             if(this.Opacity < 1) this.Opacity += 0.05;
-            circularProgressBar1.Value += 1;
-            circularProgressBar1.Text = circularProgressBar1.Value.ToString();
-            if (circularProgressBar1.Value == 100)
+            circularProgressBar2.Value += 1;
+            circularProgressBar2.Text = circularProgressBar2.Value.ToString();
+            if (circularProgressBar2.Value == 100)
             {
                 timer1.Stop();
                 timer2.Start();
@@ -42,11 +43,11 @@ namespace Apresentacao
         private void FormBoasVindas_Load(object sender, EventArgs e)
         {
 
-            lblUserName.Text = UserCache.PrimeiroNome + ", " + UserCache.SobreNome;
+            lblUserName.Text = UserCache.PrimeiroNome +" "+ UserCache.SobreNome;
             this.Opacity = 0.0;
-            circularProgressBar1.Value = 0;
-            circularProgressBar1.Minimum = 0;
-            circularProgressBar1.Maximum = 100;
+            circularProgressBar2.Value = 0;
+            circularProgressBar2.Minimum = 0;
+            circularProgressBar2.Maximum = 100;
 
                 timer1.Start();
             

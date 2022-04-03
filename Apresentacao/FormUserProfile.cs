@@ -79,7 +79,7 @@ namespace Apresentacao
                     if (txtAtualSenha.Text == UserCache.Senha)
                     {
                         var userModel = new UserModel(
-                            usuario_ID: UserCache.UsuarioID,
+                            usuario_ID: UserCache.Usuario_ID,
                             loginName: txtUserName.Text,
                             senha: txtNvSenha.Text,
                             primeiroNome: txtPNome.Text,

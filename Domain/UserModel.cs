@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
 using Common.Cache;
+using System.Data;
 
 namespace Domain
 {
@@ -34,26 +35,6 @@ namespace Domain
         {
 
         }
-
-
-        public UserModel(int id_contatos, string nome, string endereco, string telefone, string Emaiil)
-        {
-            this.id_contatos = id_contatos;
-            this.nome = nome;
-            this.endereco = endereco;
-            this.telefone = telefone;
-            this.Emaiil = Emaiil;
-        }
-
-        UserDao userDao1 = new UserDao();
-        //Atributos editConsultas
-        private int id_contatos;
-        private string nome;
-        private string endereco;
-        private string telefone;
-        private string Emaiil;
-        /// /
-        /// 
         public string editUserProfile()
         {
             
@@ -68,19 +49,7 @@ namespace Domain
                 return "Usuário já está registrado, tente novamente";
             }
         }
-        public string editUserConsultas()
-        {
 
-            try
-            {
-                userDao1.editConsultas(id_contatos, nome, endereco, telefone, Emaiil);
-                return "Registro atualizada com sucesso";
-            }
-            catch (Exception ex)
-            {
-                return "Registro não inserido, tente novamente";
-            }
-        }
         public bool LoginUser(string usuario, string senha)
         {
             return userDao.Login(usuario, senha);
@@ -88,6 +57,22 @@ namespace Domain
         public string Recuperarsenha(string userRequesting)
         {
             return userDao.RecuperarSenha(userRequesting);
+        }
+        public class Dm_Consulta
+        {
+            private UserDao objetoCst = new UserDao();
+
+            public DataTable MostrarCst()
+            {
+                DataTable tabla = new DataTable();
+                tabla = objetoCst.Mostrar();
+                return tabla;
+            }
+            public void InserirCst(string nome, string email, string endereco, string telefone)
+            {
+                objetoCst.editConsultas(nome, email, endereco, telefone);
+            }
+        
         }
         public void AnyMethod()
         {

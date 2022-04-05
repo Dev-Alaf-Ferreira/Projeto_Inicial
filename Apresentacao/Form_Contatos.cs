@@ -16,28 +16,21 @@ namespace Apresentacao
     
     public partial class Form_Contatos : Form
     {
+        UserModel.Dm_Consulta objetoCsts = new UserModel.Dm_Consulta();
         public Form_Contatos()
         {
             InitializeComponent();
-            loadUserData();
-
-        }
-        private void loadUserData()
-        {
-
-            //view data grid Panel
-            txtNomeCompleto.Text = UserCache.Nome_Completo;
-            txtEmaiil.Text = UserCache.Emaiil;
-            txt_endereco.Text = UserCache.Endereco;
-            txt_Telefone.Text = UserCache.Telefone;
 
         }
 
         private void Form_Contatos_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'fazenTechDataSet.Contatos'. Você pode movê-la ou removê-la conforme necessário.
-            this.contatosTableAdapter.Fill(this.fazenTechDataSet.Contatos);
-            
+            MostrarContatos();
+        }
+        private void MostrarContatos()
+        {
+            UserModel.Dm_Consulta objeto = new UserModel.Dm_Consulta();
+            dataGridView1.DataSource = objeto.MostrarCst();
         }
 
         private void btnEncerrarProfile_Click(object sender, EventArgs e)
@@ -56,27 +49,23 @@ namespace Apresentacao
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtNomeCompleto.Text != "" && txt_Telefone.Text != "" && txt_endereco.Text != "" && txtEmaiil.Text != "")
+            try
             {
+                if (txtNomeCompleto.Text != "" && txt_Telefone.Text != "" && txt_endereco.Text != "" && txtEmaiil.Text != "")
+                {
 
-                var userModel = new UserModel(
-                   id_contatos: UserCache.id_Contatos,
-                   nome: txtNomeCompleto.Text,
-                   telefone: txt_Telefone.Text,
-                   endereco: txt_endereco.Text,
-                   Emaiil: txtEmaiil.Text);
-                var result = userModel.editUserConsultas();
-                MessageBox.Show(result);
+                    objetoCsts.InserirCst(txtNomeCompleto.Text, txtEmaiil.Text, txt_endereco.Text, txt_Telefone.Text);
+                    MessageBox.Show("Registro inserido com sucesso!!!");
+                    MostrarContatos();
 
+                }
             }
-            else
+            catch (Exception ex)
+            {
                 MessageBox.Show("Registro não foi salvo, tente novamente");
-            btnEncerraContatos.Visible = true;
+            }
+                btnEncerraContatos.Visible = true;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

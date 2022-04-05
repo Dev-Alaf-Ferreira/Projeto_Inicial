@@ -129,11 +129,6 @@
     <Compile Include="Comercial\MainMenuComerc.Designer.cs">
       <DependentUpon>MainMenuComerc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FazenTechDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FazenTechDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form3_Agendamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,17 +205,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="FazenTechDataSet.xsc">
-      <DependentUpon>FazenTechDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FazenTechDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FazenTechDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FazenTechDataSet.xss">
-      <DependentUpon>FazenTechDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -261,15 +245,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FazenTech.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FazenTech_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>FazenTech.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

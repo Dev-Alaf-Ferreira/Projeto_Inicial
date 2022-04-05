@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Contatos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,13 +44,6 @@
             this.btnEncerraContatos = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idContatosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeCompletoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emaiilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fazenTechDataSet = new Apresentacao.FazenTechDataSet();
             this.txt_endereco = new System.Windows.Forms.TextBox();
             this.lblende = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,12 +51,9 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnNewContato = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.contatosTableAdapter = new Apresentacao.FazenTechDataSetTableAdapters.ContatosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerraContatos)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contatosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fazenTechDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +65,7 @@
             this.lblNomeProfile.ForeColor = System.Drawing.SystemColors.Control;
             this.lblNomeProfile.Location = new System.Drawing.Point(17, 90);
             this.lblNomeProfile.Name = "lblNomeProfile";
-            this.lblNomeProfile.Size = new System.Drawing.Size(50, 16);
+            this.lblNomeProfile.Size = new System.Drawing.Size(49, 16);
             this.lblNomeProfile.TabIndex = 12;
             this.lblNomeProfile.Text = "Nome:";
             // 
@@ -88,7 +77,7 @@
             this.lblEmailProfile.ForeColor = System.Drawing.SystemColors.Control;
             this.lblEmailProfile.Location = new System.Drawing.Point(17, 128);
             this.lblEmailProfile.Name = "lblEmailProfile";
-            this.lblEmailProfile.Size = new System.Drawing.Size(53, 16);
+            this.lblEmailProfile.Size = new System.Drawing.Size(52, 16);
             this.lblEmailProfile.TabIndex = 14;
             this.lblEmailProfile.Text = "E-mail:";
             // 
@@ -116,7 +105,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(178, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 44);
+            this.label1.Size = new System.Drawing.Size(180, 44);
             this.label1.TabIndex = 19;
             this.label1.Text = "Contatos";
             // 
@@ -128,7 +117,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(17, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "Telefone:";
             // 
@@ -177,7 +166,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 561);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dataGridView1
             // 
@@ -187,7 +175,6 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -199,13 +186,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idContatosDataGridViewTextBoxColumn,
-            this.nomeCompletoDataGridViewTextBoxColumn,
-            this.enderecoDataGridViewTextBoxColumn,
-            this.telefoneDataGridViewTextBoxColumn,
-            this.emaiilDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.contatosBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,7 +195,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 411);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 393);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -228,50 +208,8 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.Size = new System.Drawing.Size(834, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(834, 168);
             this.dataGridView1.TabIndex = 31;
-            // 
-            // idContatosDataGridViewTextBoxColumn
-            // 
-            this.idContatosDataGridViewTextBoxColumn.DataPropertyName = "Id_Contatos";
-            this.idContatosDataGridViewTextBoxColumn.HeaderText = "Id_Contatos";
-            this.idContatosDataGridViewTextBoxColumn.Name = "idContatosDataGridViewTextBoxColumn";
-            this.idContatosDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idContatosDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nomeCompletoDataGridViewTextBoxColumn
-            // 
-            this.nomeCompletoDataGridViewTextBoxColumn.DataPropertyName = "Nome_Completo";
-            this.nomeCompletoDataGridViewTextBoxColumn.HeaderText = "Nome Completo";
-            this.nomeCompletoDataGridViewTextBoxColumn.Name = "nomeCompletoDataGridViewTextBoxColumn";
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            // 
-            // telefoneDataGridViewTextBoxColumn
-            // 
-            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
-            // 
-            // emaiilDataGridViewTextBoxColumn
-            // 
-            this.emaiilDataGridViewTextBoxColumn.DataPropertyName = "Emaiil";
-            this.emaiilDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emaiilDataGridViewTextBoxColumn.Name = "emaiilDataGridViewTextBoxColumn";
-            // 
-            // contatosBindingSource
-            // 
-            this.contatosBindingSource.DataMember = "Contatos";
-            this.contatosBindingSource.DataSource = this.fazenTechDataSet;
-            // 
-            // fazenTechDataSet
-            // 
-            this.fazenTechDataSet.DataSetName = "FazenTechDataSet";
-            this.fazenTechDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txt_endereco
             // 
@@ -289,7 +227,7 @@
             this.lblende.ForeColor = System.Drawing.SystemColors.Control;
             this.lblende.Location = new System.Drawing.Point(17, 166);
             this.lblende.Name = "lblende";
-            this.lblende.Size = new System.Drawing.Size(73, 16);
+            this.lblende.Size = new System.Drawing.Size(72, 16);
             this.lblende.TabIndex = 29;
             this.lblende.Text = "Endereço:";
             // 
@@ -358,10 +296,6 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // contatosTableAdapter
-            // 
-            this.contatosTableAdapter.ClearBeforeFill = true;
-            // 
             // Form_Contatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -380,8 +314,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contatosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fazenTechDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -405,13 +337,5 @@
         private System.Windows.Forms.TextBox txt_endereco;
         private System.Windows.Forms.Label lblende;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private FazenTechDataSet fazenTechDataSet;
-        private System.Windows.Forms.BindingSource contatosBindingSource;
-        private FazenTechDataSetTableAdapters.ContatosTableAdapter contatosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idContatosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeCompletoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emaiilDataGridViewTextBoxColumn;
     }
 }

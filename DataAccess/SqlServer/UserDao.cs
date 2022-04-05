@@ -11,8 +11,11 @@ using Common.Cache;
 namespace DataAccess
 {
     public class UserDao : ConnectionToSql
-    {   
-        
+    {
+        SqlDataReader leer;
+        DataTable tabla = new DataTable();
+        SqlCommand comando = new SqlCommand();
+
         public void editProfile(int id, string loginName, string senha, string primeiroNome, string sobreNome, string email)
         {
             using (var connection = GetConnection())
@@ -21,7 +24,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "update Users set " +
+                    command.CommandText = "update UsuariosAdm set " +
                         "LoginName=@username, Senha=@senha, PrimeiroNome=@Pnome, SobreNome=@Sbnome, Email=@mail where Usuario_ID=@id";
                     command.Parameters.AddWithValue("@username", loginName);
                     command.Parameters.AddWithValue("@senha", senha);
@@ -42,7 +45,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from Users where LoginName = @usuario and Senha = @senha";
+                    command.CommandText = "select * from UsuariosAdm where LoginName = @usuario and Senha = @senha";
                     command.Parameters.AddWithValue("@usuario", usuario);
                     command.Parameters.AddWithValue("@senha", senha);
                     command.CommandType = CommandType.Text;
@@ -57,8 +60,8 @@ namespace DataAccess
                             UserCache.Senha = reader.GetString(2);
                             UserCache.PrimeiroNome = reader.GetString(3);
                             UserCache.SobreNome = reader.GetString(4);
-                            UserCache.Cargo = reader.GetString(5);
-                            UserCache.Email = reader.GetString(6);
+                            UserCache.Cargo = reader.GetString(6);
+                            UserCache.Email = reader.GetString(5);
                             
                         }
                         return true;
@@ -78,7 +81,7 @@ namespace DataAccess
                 using(var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from Users where LoginName= @usuario or Email=@mail";
+                    command.CommandText = "select * from UsuariosAdm where LoginName= @usuario or Email=@mail";
                     command.Parameters.AddWithValue("@usuario", userRequesting);
                     command.Parameters.AddWithValue("@mail", userRequesting);
                     command.CommandType= CommandType.Text;
@@ -106,26 +109,41 @@ namespace DataAccess
                 }
             }
         }
-        public void editConsultas(int id_contatos, string nome, string endereco, string telefone, string email)
+        public void editConsultas(string nome, string endereco, string telefone, string email)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var comando = new SqlCommand())
+                {
+
+                    comando.Connection = connection;
+                    comando.CommandText = "InserirContatos";
+                    comando.Parameters.AddWithValue("@nome", nome);
+                    comando.Parameters.AddWithValue("@email", email);
+                    comando.Parameters.AddWithValue("@endereco", endereco);
+                    comando.Parameters.AddWithValue("@telefone", telefone);
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.ExecuteNonQuery();
+
+
+                }
+            }
+        }
+        public DataTable Mostrar()
         {
             using (var connection = GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
-
-                    command.Connection = connection;
-                    command.CommandText = "insert into Contatos(Nome_Completo, Endereco, Telefone, Emaiil) " +
-                    " values (@nome_completo, @endereco, @telefone, @emaiil) ";
-                    command.Parameters.AddWithValue("@nome_completo", nome);
-                    command.Parameters.AddWithValue("@endereço", endereco);
-                    command.Parameters.AddWithValue("@telefone", telefone);
-                    command.Parameters.AddWithValue("@emaiil", email);
-                    command.Parameters.AddWithValue("@id_contatos", id_contatos);
-                    command.CommandType = CommandType.Text;
-                    command.ExecuteNonQuery();
-                    command.Parameters.Clear();
-
+                    comando.Connection = connection;
+                    comando.CommandText = "MostrarContatos";
+                    comando.CommandType = CommandType.StoredProcedure;
+                    leer = comando.ExecuteReader();
+                    tabla.Load(leer);
+                    connection.Close();
+                    return tabla;
                 }
             }
         }

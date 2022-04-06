@@ -147,7 +147,27 @@ namespace DataAccess
                 }
             }
         }
-        public void AnyMethod()
+        public void BtEditar(string nome, string endereco, string telefone, string email, int id)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = connection;
+                    comando.CommandText = "EditarContatos";
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@nome", nome);
+                    comando.Parameters.AddWithValue("@endereco", endereco);
+                    comando.Parameters.AddWithValue("@telefone", telefone);
+                    comando.Parameters.AddWithValue("@email", email);
+                    comando.Parameters.AddWithValue("@id", id);
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+
+            public void AnyMethod()
         {
             if (UserCache.Cargo == Cargo.Administrador)
             {

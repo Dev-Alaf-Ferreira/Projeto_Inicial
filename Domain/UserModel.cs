@@ -72,6 +72,10 @@ namespace Domain
             {
                 objetoCst.editConsultas(nome, email, endereco, telefone);
             }
+            public void EditarCont(string nome, string email, string endereco, string telefone, string id)
+            {
+                objetoCst.BtEditar(nome, email, endereco, telefone, Convert.ToInt32(id));
+            }
         
         }
         public void AnyMethod()

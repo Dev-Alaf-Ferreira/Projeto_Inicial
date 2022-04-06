@@ -49,9 +49,10 @@ namespace Apresentacao
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            try
+            //Inserir
+            if (objetoCsts.EditarCont == false)
             {
-                if (txtNomeCompleto.Text != "" && txt_Telefone.Text != "" && txt_endereco.Text != "" && txtEmaiil.Text != "")
+                try
                 {
 
                     objetoCsts.InserirCst(txtNomeCompleto.Text, txtEmaiil.Text, txt_endereco.Text, txt_Telefone.Text);
@@ -59,12 +60,12 @@ namespace Apresentacao
                     MostrarContatos();
 
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Registro não foi salvo, tente novamente");
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Registro não foi salvo, tente novamente");
-            }
-                btnEncerraContatos.Visible = true;
+                    btnEncerraContatos.Visible = true;
         }
 
     }

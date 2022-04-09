@@ -76,6 +76,10 @@ namespace Domain
             {
                 objetoCst.BtEditar(nome, email, endereco, telefone, Convert.ToInt32(id));
             }
+            public void EliminarCsts(string id)
+            {
+                objetoCst.Eliminar(Convert.ToInt32(id));
+            }
         
         }
         public void AnyMethod()

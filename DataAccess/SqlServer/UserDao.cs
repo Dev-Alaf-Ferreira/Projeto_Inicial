@@ -62,7 +62,7 @@ namespace DataAccess
                             UserCache.SobreNome = reader.GetString(4);
                             UserCache.Cargo = reader.GetString(6);
                             UserCache.Email = reader.GetString(5);
-                            
+
                         }
                         return true;
                     }
@@ -78,13 +78,13 @@ namespace DataAccess
             using (var connection = GetConnection())
             {
                 connection.Open();
-                using(var command = new SqlCommand())
+                using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
                     command.CommandText = "select * from UsuariosAdm where LoginName= @usuario or Email=@mail";
                     command.Parameters.AddWithValue("@usuario", userRequesting);
                     command.Parameters.AddWithValue("@mail", userRequesting);
-                    command.CommandType= CommandType.Text;
+                    command.CommandType = CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
 
                     if (reader.Read() == true)
@@ -125,7 +125,8 @@ namespace DataAccess
                     comando.Parameters.AddWithValue("@telefone", telefone);
                     comando.CommandType = CommandType.StoredProcedure;
                     comando.ExecuteNonQuery();
-
+                    comando.Parameters.Clear();
+                    comando.Connection.Close();
 
                 }
             }
@@ -163,21 +164,41 @@ namespace DataAccess
                     comando.Parameters.AddWithValue("@email", email);
                     comando.Parameters.AddWithValue("@id", id);
                     comando.ExecuteNonQuery();
+                    comando.Parameters.Clear();
+                    comando.Connection.Close();
                 }
             }
         }
-
-            public void AnyMethod()
+        public void Eliminar(int id)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = connection;
+                    comando.CommandText = "EliminarContato";
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@idCont", id);
+                    comando.ExecuteNonQuery();
+                    comando.Parameters.Clear();
+                    comando.Connection.Close();
+                }
+            }
+        }
+        public void AnyMethod()
         {
             if (UserCache.Cargo == Cargo.Administrador)
             {
                 //Codes
             }
             if (UserCache.Cargo == Cargo.Recepcionista || UserCache.Cargo == Cargo.Administracao || UserCache.Cargo == Cargo.Designer
-                ||  UserCache.Cargo == Cargo.Contador)
+                || UserCache.Cargo == Cargo.Contador)
             {
                 //Codes
             }
         }
     }
 }
+    
+

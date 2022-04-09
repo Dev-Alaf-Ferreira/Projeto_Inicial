@@ -68,13 +68,13 @@ namespace Domain
                 tabla = objetoCst.Mostrar();
                 return tabla;
             }
-            public void InserirCst(string nome, string email, string endereco, string telefone)
+            public void InserirCst(string Nome, string Email, string Endereco, string Telefone)
             {
-                objetoCst.editConsultas(nome, email, endereco, telefone);
+                objetoCst.editConsultas(Nome, Email, Endereco, Telefone);
             }
-            public void EditarCont(string nome, string email, string endereco, string telefone, string id)
+            public void EditarCont(string Nome, string Email, string Endereco, string Telefone, string id)
             {
-                objetoCst.BtEditar(nome, email, endereco, telefone, Convert.ToInt32(id));
+                objetoCst.BtEditar(Nome, Email, Endereco, Telefone, Convert.ToInt32(id));
             }
             public void EliminarCsts(string id)
             {

@@ -97,9 +97,9 @@ namespace Apresentacao
             {
                 EditarCont = true;
                 txtNomeCompleto.Text = dataGridView1.CurrentRow.Cells["Nome"].Value.ToString();
-                txtEmaiil.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
-                txt_endereco.Text = dataGridView1.CurrentRow.Cells["endereco"].Value.ToString();
-                txt_Telefone.Text = dataGridView1.CurrentRow.Cells["telefone"].Value.ToString();
+                txtEmaiil.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
+                txt_endereco.Text = dataGridView1.CurrentRow.Cells["Endereco"].Value.ToString();
+                txt_Telefone.Text = dataGridView1.CurrentRow.Cells["Telefone"].Value.ToString();
                 id_Contatos = dataGridView1.CurrentRow.Cells["id_Contatos"].Value.ToString();
             }
             else
